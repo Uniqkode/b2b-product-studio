@@ -1,39 +1,44 @@
 # GrainLedger
 
-Bring every grain lot from weighbridge to dispatch into one ledger.
+AI reviews grain photos and intake documents before a lot is released.
 
-A working grain register for aggregation teams. Reconcile intake, quality and dispatch before a small discrepancy becomes a costly one.
+For grain aggregators and warehouse quality teams. GrainLedger checks standardized grain photos, reads weight and moisture records, and flags lots that need a human quality check.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Grain aggregators & warehouse quality teams
+- Input: Grain photos, scale tickets and moisture sheets
+- AI output: A lot-quality report with discrepancies highlighted
+- Human action: Record quality decision
 
-## Demo access
+Visual grading is a screening step. A warehouse specialist confirms the grade, sampling method and test results.
 
-- Email: `demo@grainledger.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:grainledger:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@grainledger.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+64 hypothetical organizations × 18 deliveries per warehouse / day × 26 receiving days / month × 12 photos and pages per delivery = **359,424 photo & page reviews / month**.
+
+Daily truck arrivals create a repeated visual-inspection and document-reading workload, rather than a one-off chatbot conversation.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Libre Baskerville; body: Manrope
-- Accent: #b95e2e; ground: #f5eee0
-- Signature: Ruled ledger with stamped lot numbers
-- Logo rationale: Interlocking G and L strokes form a warehouse tally with three grain bars.
-- SVG source: `dist/assets/logo.svg`
+Heading: IBM Plex Sans. Body: Manrope. Accent: #e6a92e. Signature: Ruled ledger with stamped lot numbers.
 
-## Sample totals
+Logo: Interlocking G and L strokes form a warehouse tally with three grain bars.
 
-8 lots, totaling 214.5 t. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

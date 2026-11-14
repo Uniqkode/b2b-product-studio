@@ -1,0 +1,147 @@
+{
+  "method": "Happy DOM; connected responses mocked; no paid AI requests",
+  "products": 10,
+  "groups": 80,
+  "results": [
+    {
+      "brand": "Fieldwell",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "GrainLedger",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Rill",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Coldline",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Plotmark",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Leasewell",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Brickwise",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Watchpost",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Gatehouse",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    },
+    {
+      "brand": "Proofline",
+      "status": "passed",
+      "groups": [
+        "prepared run and no network calls",
+        "source citation and exact highlight",
+        "retained human-review state",
+        "report export with evidence",
+        "alternate case and distinct report",
+        "history restoration and export",
+        "connected analysis boundary, usage and safe rendering",
+        "unconfigured service error and recovery"
+      ]
+    }
+  ]
+}

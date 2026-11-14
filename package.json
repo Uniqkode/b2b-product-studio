@@ -1,12 +1,13 @@
 {
   "name": "b2b-product-studio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
+    "api": "node server/ai-service.mjs",
     "build": "node scripts/build.mjs",
-    "test": "node --test scripts/check.test.mjs"
+    "test": "node --test scripts/check.test.mjs server/ai-service.test.mjs"
   },
   "engines": { "node": ">=20" }
 }

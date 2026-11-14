@@ -1,214 +1,154 @@
-# Brand guide
+# Brand guide — product-led revision
 
-Ten deliberate identities for ten different B2B operating jobs. Marks are original SVG artwork. Brand names and pricing are product concepts, without trademark clearance or established business claims.
+Ten distinct identities with larger, consistent reading text. Product screens and evidence-led reports carry the story. Photography is licensed and locally hosted; no AI-generated people or customer imagery is used. Brand names remain concepts without trademark clearance.
 
 ## Fieldwell
 
 ![Fieldwell mark](fieldwell/assets/logo.svg)
 
-See which fields need attention before your next farm visit.
+AI checks field photos and shows agronomists where to inspect next.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | Three cultivated rows bend into an F; an open seed shape leaves room for growth. |
-| Typography | DM Serif Display headings; DM Sans body. |
-| Palette | Ink #203b29; ground #f3f1e7; accent #d2e87a; dark band #1d3526. |
-| Signature device | Field contours. |
-| Composition | Loud landscape hero → quiet product preview → short scenario strip → numbered field workflow → split feature list. |
-| Grid | Asymmetric image and copy; quieter supporting rows and spacious operational panels. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 fields totaling 486 ha. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/fieldwell/)
-- [Standalone source](../sites/fieldwell/README.md)
-- [Logo SVG](fieldwell/assets/logo.svg)
+- **Buyer:** Commercial growers & agronomy teams.
+- **Typography:** Manrope headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #17392c, paper #f6f8f3, accent #086b50, dark band #123c2d.
+- **Signature:** Field contours.
+- **Logo rationale:** Three cultivated rows bend into an F; an open seed shape leaves room for growth.
+- **Composition:** pastoral cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Assign an inspection.
 
 ## GrainLedger
 
 ![GrainLedger mark](grainledger/assets/logo.svg)
 
-Bring every grain lot from weighbridge to dispatch into one ledger.
+AI reviews grain photos and intake documents before a lot is released.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | Interlocking G and L strokes form a warehouse tally with three grain bars. |
-| Typography | Libre Baskerville headings; Manrope body. |
-| Palette | Ink #342b22; ground #f5eee0; accent #b95e2e; dark band #342b22. |
-| Signature device | Ruled ledger with stamped lot numbers. |
-| Composition | Ruled masthead → two-column grain ledger → brief variance example → wide register → compact feature list. |
-| Grid | Sharp ruled divisions; asymmetric content and operational tables. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 lots totaling 214.5 t. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/grainledger/)
-- [Standalone source](../sites/grainledger/README.md)
-- [Logo SVG](grainledger/assets/logo.svg)
+- **Buyer:** Grain aggregators & warehouse quality teams.
+- **Typography:** IBM Plex Sans headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #293443, paper #f5f6f8, accent #e6a92e, dark band #1d2939.
+- **Signature:** Ruled ledger with stamped lot numbers.
+- **Logo rationale:** Interlocking G and L strokes form a warehouse tally with three grain bars.
+- **Composition:** ledger cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Record quality decision.
 
 ## Rill
 
 ![Rill mark](rill/assets/logo.svg)
 
-Give every irrigation team a clear plan for the next watering cycle.
+AI forecasts crop water demand and gives irrigation teams a daily zone plan.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | An R made from two flowing channels; the counter is a water drop. |
-| Typography | Outfit headings; DM Sans body. |
-| Palette | Ink #153e47; ground #eef4ef; accent #167b87; dark band #153e47. |
-| Signature device | Rill channels and measured water rings. |
-| Composition | Oversized rounded headline → circular field visual → compact water calculator → generous product section → four-step channel. |
-| Grid | Asymmetric image and copy; quieter supporting rows and spacious operational panels. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 zones totaling 1,240 m³. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/rill/)
-- [Standalone source](../sites/rill/README.md)
-- [Logo SVG](rill/assets/logo.svg)
+- **Buyer:** Commercial farms & irrigation cooperatives.
+- **Typography:** Outfit headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #173b44, paper #eef6f7, accent #007e9a, dark band #143c46.
+- **Signature:** Rill channels and measured water rings.
+- **Logo rationale:** An R made from two flowing channels; the counter is a water drop.
+- **Composition:** water cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Approve the watering plan.
 
 ## Coldline
 
 ![Coldline mark](coldline/assets/logo.svg)
 
-Know which produce shipments need a cold-chain intervention.
+AI reviews produce images and temperature histories to flag shipments at risk.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | A squared C encloses a temperature line; the open edge represents goods moving through. |
-| Typography | Space Grotesk headings; Manrope body. |
-| Palette | Ink #17332d; ground #f2f6f4; accent #167b64; dark band #0e2c27. |
-| Signature device | Temperature trace and cargo-label corners. |
-| Composition | Two-level dispatch desk → produce band with temperature overlay → product register → process steps → exception strip. |
-| Grid | Asymmetric image and copy; quieter supporting rows and spacious operational panels. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 shipments totaling 96 pallets. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/coldline/)
-- [Standalone source](../sites/coldline/README.md)
-- [Logo SVG](coldline/assets/logo.svg)
+- **Buyer:** Produce exporters & cold-chain operators.
+- **Typography:** Space Grotesk headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #1a384b, paper #f3f8fa, accent #136f99, dark band #143347.
+- **Signature:** Temperature trace and cargo-label corners.
+- **Logo rationale:** A squared C encloses a temperature line; the open edge represents goods moving through.
+- **Composition:** cold cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Assign a cold-chain check.
 
 ## Plotmark
 
 ![Plotmark mark](plotmark/assets/logo.svg)
 
-Move land parcels from scattered documents to a clear review decision.
+AI compares land documents and survey references before an acquisition review.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | A parcel outline folds into a P, anchored by a survey pin at its baseline. |
-| Typography | Instrument Serif headings; Manrope body. |
-| Palette | Ink #2d3530; ground #f2f1e9; accent #c75b36; dark band #263b32. |
-| Signature device | Survey crosshairs, parcel outlines and coordinates. |
-| Composition | Graph-paper acquisition cover → boundary overlay → short review scenario → product desk → survey workflow. |
-| Grid | Sharp ruled divisions; asymmetric content and operational tables. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 parcels totaling 48.6 ha. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/plotmark/)
-- [Standalone source](../sites/plotmark/README.md)
-- [Logo SVG](plotmark/assets/logo.svg)
+- **Buyer:** Property developers & acquisition teams.
+- **Typography:** DM Sans headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #253d47, paper #f3f5f6, accent #c46431, dark band #253f49.
+- **Signature:** Survey crosshairs, parcel outlines and coordinates.
+- **Logo rationale:** A parcel outline folds into a P, anchored by a survey pin at its baseline.
+- **Composition:** survey cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Send for professional review.
 
 ## Leasewell
 
 ![Leasewell mark](leasewell/assets/logo.svg)
 
-Give every lease renewal a date, an owner and a next step.
+AI reads commercial leases and amendments, then lists the obligations that need action.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | An open arch meets a ledger baseline: the building and the lease in one quiet mark. |
-| Typography | Cormorant Garamond headings; DM Sans body. |
-| Palette | Ink #44372f; ground #f4eee8; accent #b3694c; dark band #493a31. |
-| Signature device | Architectural arches and inset editorial captions. |
-| Composition | Editorial masthead → tall architectural arch → calm product preview → lease scenario → arch-shaped calculator. |
-| Grid | Asymmetric image and copy; quieter supporting rows and spacious operational panels. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 leases totaling 6,420 m². |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/leasewell/)
-- [Standalone source](../sites/leasewell/README.md)
-- [Logo SVG](leasewell/assets/logo.svg)
+- **Buyer:** Commercial property & asset managers.
+- **Typography:** Manrope headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #243652, paper #f5f6f9, accent #2a58ba, dark band #192c4c.
+- **Signature:** Architectural arches and inset editorial captions.
+- **Logo rationale:** An open arch meets a ledger baseline: the building and the lease in one quiet mark.
+- **Composition:** editorial cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Assign the lease action.
 
 ## Brickwise
 
 ![Brickwise mark](brickwise/assets/logo.svg)
 
-Get building faults out of the group chat and into a work order.
+AI reviews building inspection images and notes, then drafts an evidence-linked repair list.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | Offset masonry units build a B with an open service passage through the center. |
-| Typography | Barlow Condensed headings; Manrope body. |
-| Palette | Ink #262e30; ground #eeeeea; accent #e5a13d; dark band #273234. |
-| Signature device | Work-order tabs and offset masonry blocks. |
-| Composition | Heavy work-order headline → offset service ticket → tight job strip → product board → numbered trade modules. |
-| Grid | Sharp ruled divisions; asymmetric content and operational tables. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 work orders totaling 42 hours. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/brickwise/)
-- [Standalone source](../sites/brickwise/README.md)
-- [Logo SVG](brickwise/assets/logo.svg)
+- **Buyer:** Facility managers & building operators.
+- **Typography:** Barlow Condensed headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #27302d, paper #f4f3ef, accent #e9ae29, dark band #303735.
+- **Signature:** Work-order tabs and offset masonry blocks.
+- **Logo rationale:** Offset masonry units build a B with an open service passage through the center.
+- **Composition:** industrial cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Create the reviewed work order.
 
 ## Watchpost
 
 ![Watchpost mark](watchpost/assets/logo.svg)
 
-Turn site reports into a clear incident queue for the next shift decision.
+AI checks site video for defined events and sends supervisors the relevant clip.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | Two observation brackets and a central line make a W without a conventional shield. |
-| Typography | Space Grotesk headings; DM Sans body. |
-| Palette | Ink #e6eee3; ground #14201c; accent #b7d77a; dark band #0c1512. |
-| Signature device | Observation brackets and quiet radar lines. |
-| Composition | Status line → dark command view → bracketed site image → product desk → numbered incident flow. |
-| Grid | Asymmetric image and copy; quieter supporting rows and spacious operational panels. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 incidents totaling 118 min. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/watchpost/)
-- [Standalone source](../sites/watchpost/README.md)
-- [Logo SVG](watchpost/assets/logo.svg)
+- **Buyer:** Contract security operators & site supervisors.
+- **Typography:** Space Grotesk headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #e5efed, paper #111d1d, accent #c0e58d, dark band #0a1416.
+- **Signature:** Observation brackets and quiet radar lines.
+- **Logo rationale:** Two observation brackets and a central line make a W without a conventional shield.
+- **Composition:** command cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Record the supervisor response.
 
 ## Gatehouse
 
 ![Gatehouse mark](gatehouse/assets/logo.svg)
 
-Help reception teams review visits and contractor arrivals in one place.
+AI reads contractor documents and flags missing or expired evidence for a reviewer.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | A doorway cut from a G creates a welcoming entrance with a clear boundary. |
-| Typography | Fraunces headings; Manrope body. |
-| Palette | Ink #3d3430; ground #f6f0e6; accent #bf503c; dark band #3d3430. |
-| Signature device | Doorway arches and stamped visitor passes. |
-| Composition | Warm typographic welcome → arched workplace image → tilted pass → short reception scenario → quiet register. |
-| Grid | Asymmetric image and copy; quieter supporting rows and spacious operational panels. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 visits totaling 34 people. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/gatehouse/)
-- [Standalone source](../sites/gatehouse/README.md)
-- [Logo SVG](gatehouse/assets/logo.svg)
+- **Buyer:** Industrial workplaces & facilities teams.
+- **Typography:** Manrope headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #392e3b, paper #f6f5f2, accent #be403f, dark band #38313c.
+- **Signature:** Doorway arches and stamped visitor passes.
+- **Logo rationale:** A doorway cut from a G creates a welcoming entrance with a clear boundary.
+- **Composition:** welcome cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Request the missing evidence.
 
 ## Proofline
 
 ![Proofline mark](proofline/assets/logo.svg)
 
-Keep supplier security reviews moving from evidence request to decision.
+AI compares supplier security documents with your questions and cites the answers.
 
-| Decision | Direction |
-| --- | --- |
-| Logo | A continuous P-shaped evidence line ends in a small verified square, without implying certification. |
-| Typography | IBM Plex Sans headings; IBM Plex Sans body. |
-| Palette | Ink #24363b; ground #eef1f0; accent #2c626c; dark band #24363b. |
-| Signature device | Evidence reference lines and annotated document margins. |
-| Composition | Document reference masthead → annotated evidence memorandum → compact workflow band → review register → evidence scenario. |
-| Grid | Sharp ruled divisions; asymmetric content and operational tables. |
-| Motion | Restrained hover/focus changes and native disclosures. No decorative autoplay or entrance animation. Reduced-motion preference is respected. |
-| Demonstration | 8 reviews totaling 184 controls. |
-
-- [Website](https://uniqkode.github.io/b2b-product-studio/proofline/)
-- [Standalone source](../sites/proofline/README.md)
-- [Logo SVG](proofline/assets/logo.svg)
+- **Buyer:** Procurement & information-security teams.
+- **Typography:** IBM Plex Sans headings; IBM Plex Sans body. Body copy and interface controls use readable sizes; display text is restrained.
+- **Palette:** ink #233e3d, paper #f3f6f5, accent #116f68, dark band #193c3a.
+- **Signature:** Evidence reference lines and annotated document margins.
+- **Logo rationale:** A continuous P-shaped evidence line ends in a small verified square, without implying certification.
+- **Composition:** assurance cover, product result preview, working evidence review and a documented workload scenario.
+- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
+- **Primary product action:** Send the evidence request.
 

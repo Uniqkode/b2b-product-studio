@@ -1,39 +1,44 @@
 # Watchpost
 
-Turn site reports into a clear incident queue for the next shift decision.
+AI checks site video for defined events and sends supervisors the relevant clip.
 
-An incident desk for multi-site security teams. Bring patrol exceptions and site reports into a queue that a shift supervisor can actually work.
+For security operators managing warehouses and commercial sites. Watchpost looks for events such as an open service gate or movement in a closed area, then gives the supervisor a timestamped review queue.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Contract security operators & site supervisors
+- Input: Authorized camera streams and site event rules
+- AI output: A timestamped event clip and reason for review
+- Human action: Record the supervisor response
 
-## Demo access
+No face identification or automatic emergency dispatch. A supervisor verifies every event and follows the site’s response procedure.
 
-- Email: `demo@watchpost.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:watchpost:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@watchpost.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+55 hypothetical organizations × 8 camera streams per operator × 21,600 monitored minutes / stream / month × 6 sampled frames per minute = **57,024,000 frame checks / month**.
+
+The scenario assumes 12 hours per day for 30 days. Sampling six frames per minute produces a large recurring computer-vision workload; full clips are escalated only for defined events.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Space Grotesk; body: DM Sans
-- Accent: #b7d77a; ground: #14201c
-- Signature: Observation brackets and quiet radar lines
-- Logo rationale: Two observation brackets and a central line make a W without a conventional shield.
-- SVG source: `dist/assets/logo.svg`
+Heading: Space Grotesk. Body: DM Sans. Accent: #c0e58d. Signature: Observation brackets and quiet radar lines.
 
-## Sample totals
+Logo: Two observation brackets and a central line make a W without a conventional shield.
 
-8 incidents, totaling 118 min. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

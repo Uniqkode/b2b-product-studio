@@ -1,39 +1,44 @@
 # Brickwise
 
-Get building faults out of the group chat and into a work order.
+AI reviews building inspection images and notes, then drafts an evidence-linked repair list.
 
-A practical maintenance board for commercial property teams. Turn a fault report into a named work order, a clear priority and a recorded resolution.
+For facility managers and building maintenance teams. Brickwise groups repeated defects in photos, reads technician notes and suggests which issues need a qualified inspection first.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Facility managers & building operators
+- Input: Inspection photos, thermal images and technician notes
+- AI output: A grouped defect list and draft work orders
+- Human action: Create the reviewed work order
 
-## Demo access
+An image cannot certify structural or equipment safety. A qualified professional inspects the condition and approves the work.
 
-- Email: `demo@brickwise.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:brickwise:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@brickwise.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+65 hypothetical organizations × 12 buildings per operator × 2 surveys per building / month × 180 images per survey = **280,800 inspection images / month**.
+
+The model reviews fresh inspection imagery across a property portfolio and compares follow-up photos with the original defect record.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Barlow Condensed; body: Manrope
-- Accent: #e5a13d; ground: #eeeeea
-- Signature: Work-order tabs and offset masonry blocks
-- Logo rationale: Offset masonry units build a B with an open service passage through the center.
-- SVG source: `dist/assets/logo.svg`
+Heading: Barlow Condensed. Body: Manrope. Accent: #e9ae29. Signature: Work-order tabs and offset masonry blocks.
 
-## Sample totals
+Logo: Offset masonry units build a B with an open service passage through the center.
 
-8 work orders, totaling 42 hours. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

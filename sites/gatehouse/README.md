@@ -1,39 +1,44 @@
 # Gatehouse
 
-Help reception teams review visits and contractor arrivals in one place.
+AI reads contractor documents and flags missing or expired evidence for a reviewer.
 
-Manage the daily rhythm of workplace visitors and contractors. Give reception a shared register and hosts a clear next action.
+For industrial workplaces and facilities teams. Gatehouse compares training certificates, insurance schedules and work-permit requirements, then explains what is missing before a contractor starts a job.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Industrial workplaces & facilities teams
+- Input: Training certificates, insurance schedules and job requirements
+- AI output: A contractor checklist with missing or conflicting evidence
+- Human action: Request the missing evidence
 
-## Demo access
+It checks supplied documents. It does not authenticate a certificate, identify a person or independently authorize workplace access.
 
-- Email: `demo@gatehouse.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:gatehouse:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@gatehouse.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+48 hypothetical organizations × 120 contractor packs per team × 2 new or changed reviews / month × 18 pages per contractor pack = **207,360 document pages / month**.
+
+New jobs and expiring documents create repeated reading and comparison work. The scope is contractor evidence, rather than a low-volume visitor register.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Fraunces; body: Manrope
-- Accent: #bf503c; ground: #f6f0e6
-- Signature: Doorway arches and stamped visitor passes
-- Logo rationale: A doorway cut from a G creates a welcoming entrance with a clear boundary.
-- SVG source: `dist/assets/logo.svg`
+Heading: Manrope. Body: Manrope. Accent: #be403f. Signature: Doorway arches and stamped visitor passes.
 
-## Sample totals
+Logo: A doorway cut from a G creates a welcoming entrance with a clear boundary.
 
-8 visits, totaling 34 people. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

@@ -1,39 +1,44 @@
 # Proofline
 
-Keep supplier security reviews moving from evidence request to decision.
+AI compares supplier security documents with your questions and cites the answers.
 
-A review desk for vendor security questionnaires. Track the open evidence request, the review owner and the decision that follows.
+For procurement and information-security teams. Proofline reads policies, questionnaires and supporting reports, then drafts a review showing what is supported, unclear or still missing.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Procurement & information-security teams
+- Input: Vendor policies, questionnaires and supporting reports
+- AI output: A cited security review with unanswered evidence requests
+- Human action: Send the evidence request
 
-## Demo access
+A drafted answer is not an assurance opinion or certification. A qualified reviewer decides whether the evidence is sufficient.
 
-- Email: `demo@proofline.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:proofline:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@proofline.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+60 hypothetical organizations × 40 vendor reviews per team / month × 1 read per new or changed pack × 160 pages per vendor pack = **384,000 document pages / month**.
+
+The scenario contains 384,000 pages per month. At an illustrative 500 input tokens per page, that is 192 million input tokens before answers, retries or additional review passes.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: IBM Plex Sans; body: IBM Plex Sans
-- Accent: #2c626c; ground: #eef1f0
-- Signature: Evidence reference lines and annotated document margins
-- Logo rationale: A continuous P-shaped evidence line ends in a small verified square, without implying certification.
-- SVG source: `dist/assets/logo.svg`
+Heading: IBM Plex Sans. Body: IBM Plex Sans. Accent: #116f68. Signature: Evidence reference lines and annotated document margins.
 
-## Sample totals
+Logo: A continuous P-shaped evidence line ends in a small verified square, without implying certification.
 
-8 reviews, totaling 184 controls. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

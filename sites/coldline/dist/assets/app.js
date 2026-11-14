@@ -55,10 +55,10 @@
  });
  $$('[data-reset]').forEach(button=>button.addEventListener('click',()=>{
   if(!window.confirm('Restore the sample '+config.name+' workspace? This removes saved records, pilot briefs and the demo session for this brand in this browser.'))return;
-  for(const item of ['records','brief'])remove('localStorage',item);
+  for(const item of ['records','brief','analyses'])remove('localStorage',item);
   remove('sessionStorage','session');
   if(document.body.dataset.page==='dashboard') window.location.assign(base+'login/');
-  else {$('#pilot-result')?.setAttribute('hidden','');$('#pilot-form')?.reset();notify('Sample data restored. Saved records, brief and demo session cleared.');}
+  else window.location.reload();
  }));
  $$('[data-billing]').forEach(button=>button.addEventListener('click',()=>{
   const annual=button.dataset.billing==='annual';

@@ -1,39 +1,44 @@
 # Coldline
 
-Know which produce shipments need a cold-chain intervention.
+AI reviews produce images and temperature histories to flag shipments at risk.
 
-A control desk for fresh-produce logistics. Review temperature excursions, assign a follow-up and keep each shipment moving with a clear record.
+For fresh-produce exporters, cold stores and logistics operators. Coldline checks pallet images and changing temperature records, then explains which shipment needs a cold-chain intervention.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Produce exporters & cold-chain operators
+- Input: Pallet images and shipment temperature histories
+- AI output: A condition warning with the affected pallet and reason
+- Human action: Assign a cold-chain check
 
-## Demo access
+The warning supports an inspection. It does not certify food safety or replace a qualified quality decision.
 
-- Email: `demo@coldline.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:coldline:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@coldline.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+55 hypothetical organizations × 120 active shipments per operator × 24 checks per shipment / month × 4 images and records per check = **633,600 condition checks / month**.
+
+The same load is checked at multiple points. The value comes from combining visual condition with its changing storage and transport history.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Space Grotesk; body: Manrope
-- Accent: #167b64; ground: #f2f6f4
-- Signature: Temperature trace and cargo-label corners
-- Logo rationale: A squared C encloses a temperature line; the open edge represents goods moving through.
-- SVG source: `dist/assets/logo.svg`
+Heading: Space Grotesk. Body: Manrope. Accent: #136f99. Signature: Temperature trace and cargo-label corners.
 
-## Sample totals
+Logo: A squared C encloses a temperature line; the open edge represents goods moving through.
 
-8 shipments, totaling 96 pallets. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

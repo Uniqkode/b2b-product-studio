@@ -1,39 +1,44 @@
 # Leasewell
 
-Give every lease renewal a date, an owner and a next step.
+AI reads commercial leases and amendments, then lists the obligations that need action.
 
-Keep commercial lease renewals, occupied space and portfolio actions in view. A quieter working day for property and asset management teams.
+For commercial property and asset managers. Leasewell turns long lease packs into a dated action list, with the rent, renewal and notice clause beside each recommendation.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Commercial property & asset managers
+- Input: Leases, amendments and related rent documents
+- AI output: A lease brief with dates, obligations and cited clauses
+- Human action: Assign the lease action
 
-## Demo access
+It supports lease administration. Legal interpretation, contractual notices and commercial decisions require the appointed professional.
 
-- Email: `demo@leasewell.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:leasewell:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@leasewell.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+75 hypothetical organizations × 45 lease packs per team / month × 1 review per changed pack × 140 pages per lease pack = **472,500 document pages / month**.
+
+Each new pack requires a detailed read and cross-document check. Portfolio reviews repeat the work for changed agreements and approaching obligations.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Cormorant Garamond; body: DM Sans
-- Accent: #b3694c; ground: #f4eee8
-- Signature: Architectural arches and inset editorial captions
-- Logo rationale: An open arch meets a ledger baseline: the building and the lease in one quiet mark.
-- SVG source: `dist/assets/logo.svg`
+Heading: Manrope. Body: DM Sans. Accent: #2a58ba. Signature: Architectural arches and inset editorial captions.
 
-## Sample totals
+Logo: An open arch meets a ledger baseline: the building and the lease in one quiet mark.
 
-8 leases, totaling 6,420 m². These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.

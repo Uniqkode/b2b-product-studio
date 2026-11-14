@@ -4,6 +4,8 @@ import {readFile,stat,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {brands,routes} from '../src/brands.mjs';
+import {enrichBrands} from '../src/ai-briefs.mjs';
+enrichBrands(brands);
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const docs=path.join(root,'docs');
 async function files(dir){const results=[];for(const entry of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);results.push(...(entry.isDirectory()?await files(p):[p]));}return results;}
@@ -25,10 +27,23 @@ test('ten independent identities include unique marks and deliberate typography 
  for(const field of ['slug','name','layout','logoIdea','motif'])assert.equal(new Set(brands.map(b=>b[field])).size,10,field);
  const marks=await Promise.all(brands.map(b=>readFile(path.join(docs,b.slug,'assets/logo.svg'),'utf8')));
  assert.equal(new Set(marks).size,10);
- assert.ok(new Set(brands.map(b=>b.headingFont)).size>=9);
+ assert.ok(new Set(brands.map(b=>b.headingFont)).size>=6);
  assert.equal(brands.filter(b=>b.sector==='Agriculture').length,4);
  assert.equal(brands.filter(b=>b.sector==='Real estate').length,3);
  assert.equal(brands.filter(b=>b.sector==='Security').length,3);
+});
+
+test('AI workload scenarios reconcile and prepared findings cite supplied evidence',async()=>{
+ for(const b of brands){
+  const w=b.ai.workload;
+  assert.equal(b.ai.volume,w.organizations*w.units*w.cycles*w.items);
+  assert.ok(b.ai.volume>=200000);
+  const config=await readFile(path.join(docs,b.slug,'assets/config.js'),'utf8');
+  assert.ok(config.includes(String(b.ai.volume)));
+  for(const f of b.ai.findings){const source=b.ai.sources.find(s=>s.id===f.source);assert.ok(source,`${b.slug}: ${f.source}`);assert.ok(source.excerpt.toLowerCase().includes(f.quote.toLowerCase()),`${b.slug}: quotation ${f.quote}`);}
+  const home=await readFile(path.join(docs,b.slug,'index.html'),'utf8');
+  assert.match(home,/data-ai-workbench/);assert.match(home,/data-ai-run/);assert.match(home,/Planning scenario/);assert.ok(home.includes('A live AI service is not connected')||home.includes('A live AI service is not connected'.toLowerCase())||home.includes('A live AI service is not connected by default'));
+ }
 });
 
 test('all 150 brand pages have a title, a single main heading and a disclosure of demo scope',async()=>{

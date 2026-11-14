@@ -1,39 +1,44 @@
 # Plotmark
 
-Move land parcels from scattered documents to a clear review decision.
+AI compares land documents and survey references before an acquisition review.
 
-A parcel review workspace for property acquisition teams. Bring survey references, title checks and open questions into one considered investment decision.
+For property developers and land acquisition teams. Plotmark reads title papers, survey plans and planning documents, then lists missing evidence and conflicting parcel details with page references.
 
-## Run
+## Product workflow
 
-Serve the `dist` folder with any static HTTP server. There is no install or build step for the standalone output. Do not open HTML with file://; localStorage and route behavior need HTTP.
+- Buyer: Property developers & acquisition teams
+- Input: Title papers, survey plans and planning documents
+- AI output: A parcel review brief with document conflicts and missing evidence
+- Human action: Send for professional review
 
-## Demo access
+It prepares a due-diligence brief. It does not confirm ownership, verify a registry entry or replace a lawyer or licensed surveyor.
 
-- Email: `demo@plotmark.example`
-- Password: `MVPdemo2026!`
-- Or select **Continue with sample workspace**.
+## Try the workspace
 
-This is public demo access, not production authentication. All data is illustrative. Changes and pilot briefs stay in the current browser under the `b2b:plotmark:` key namespace. Reset restores the fixtures. Do not enter real or sensitive information.
+Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@plotmark.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
 
-## Included
+Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
 
-Home, product, technology, pricing, about, security, contact/pilot draft, privacy, terms/credits, blog, two complete articles, login, dashboard and 404 pages. The dashboard supports search, status filters, sorting, record details, editable notes, record creation, completion/reopening and CSV export.
+## Connected AI
+
+The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
+
+## Workload planning
+
+60 hypothetical organizations × 35 parcel files per team / month × 1 review per changed file × 180 pages per parcel file = **378,000 document pages / month**.
+
+The workload is long-document reading and comparison across many acquisition files. Unchanged pages can be cached; new revisions trigger a fresh comparison.
+
+These are planning assumptions, not live usage or customer traction.
 
 ## Identity
 
-- Heading: Instrument Serif; body: Manrope
-- Accent: #c75b36; ground: #f2f1e9
-- Signature: Survey crosshairs, parcel outlines and coordinates
-- Logo rationale: A parcel outline folds into a P, anchored by a survey pin at its baseline.
-- SVG source: `dist/assets/logo.svg`
+Heading: DM Sans. Body: Manrope. Accent: #c46431. Signature: Survey crosshairs, parcel outlines and coordinates.
 
-## Sample totals
+Logo: A parcel outline folds into a P, anchored by a survey pin at its baseline.
 
-8 parcels, totaling 48.6 ha. These are sample operational records, not customer traction.
+SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
 
-## Production boundary
+## Scope
 
-No database, email delivery, paid subscription, model inference, sensor connection or secure account service is operating. Proposed capabilities and illustrative prices are labeled. Implement and validate a backend, identity, authorization, tenant isolation and actual controls before commercial use.
-
-Photography and fonts are local. See `dist/assets/image-sources.json`, `dist/assets/FONT-LICENSES.txt` and the terms page for source and licensing information.
+Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.
