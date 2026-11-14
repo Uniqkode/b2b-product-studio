@@ -1,0 +1,36 @@
+{
+  "method": "Happy DOM; no browser rendering",
+  "groups": 6,
+  "results": [
+    {
+      "brand": "fieldwell",
+      "route": "home",
+      "status": "passed"
+    },
+    {
+      "brand": "fieldwell",
+      "route": "product",
+      "status": "passed"
+    },
+    {
+      "brand": "grainledger",
+      "route": "home",
+      "status": "passed"
+    },
+    {
+      "brand": "grainledger",
+      "route": "product",
+      "status": "passed"
+    },
+    {
+      "brand": "proofline",
+      "route": "home",
+      "status": "passed"
+    },
+    {
+      "brand": "proofline",
+      "route": "product",
+      "status": "passed"
+    }
+  ]
+}

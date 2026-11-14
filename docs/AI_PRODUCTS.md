@@ -1,8 +1,8 @@
-# Ten AI product ideas
+# Ten AI products and their workloads
 
-Each idea centers on repeated organizational work. Every volume below is an explicit planning scenario, not current customer usage, measured performance or a cloud-credit entitlement. The useful output comes first; processing volume follows from the work. Cache unchanged evidence and group repeated events rather than manufacturing extra consumption.
+Each product addresses repeated organizational work. Volumes below are explicit planning scenarios, not existing customers, measured performance, actual Azure usage or a credit entitlement. Cache unchanged evidence and group repeated events rather than creating unnecessary consumption.
 
-| Product | Buyer and AI use case | Illustrative monthly volume |
+| Product | AI use case | Planned monthly processing |
 | --- | --- | --- |
 | [Fieldwell](https://uniqkode.github.io/b2b-product-studio/fieldwell/) | AI checks field photos and shows agronomists where to inspect next. | 691,200 image reviews |
 | [GrainLedger](https://uniqkode.github.io/b2b-product-studio/grainledger/) | AI reviews grain photos and intake documents before a lot is released. | 359,424 photo & page reviews |
@@ -27,7 +27,16 @@ Each idea centers on repeated organizational work. Every volume below is an expl
 
 Fresh survey imagery arrives throughout the season. The AI must compare many images before it can produce one useful field report.
 
+**Azure services:**
+
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Keep original drone images, field references and dated survey files together. Planned integration.
+- [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-batch?view=azureml-api-2): Run batches of crop-image checks on a trained vision model; compare the same field across survey dates. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Turn grouped image observations and scout notes into a plain-language inspection brief. Connector implemented · configure Azure deployment.
+- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions): Queue new surveys and retry failed work without reprocessing an unchanged survey. Planned integration.
+
 **Human review:** It supports scouting. A photograph alone cannot confirm disease, nutrient deficiency or a treatment.
+
+**Next integration:** Connect drone survey uploads and field boundaries; evaluate a crop-specific vision model against labelled observations.
 
 ## GrainLedger
 
@@ -41,7 +50,16 @@ Fresh survey imagery arrives throughout the season. The AI must compare many ima
 
 Daily truck arrivals create a repeated visual-inspection and document-reading workload, rather than a one-off chatbot conversation.
 
+**Azure services:**
+
+- [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout?view=doc-intel-4.0.0): Extract lot references, net weights and moisture observations from intake paperwork. Planned integration.
+- [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-batch?view=azureml-api-2): Inspect standardized grain photos for candidate broken-kernel, discoloration or foreign-material observations. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Compare extracted readings and explain the discrepancy for the warehouse quality manager. Connector implemented · configure Azure deployment.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Retain the source ticket, sample photo and reviewed intake report under the lot reference. Planned integration.
+
 **Human review:** Visual grading is a screening step. A warehouse specialist confirms the grade, sampling method and test results.
+
+**Next integration:** Connect scale-ticket and moisture-sheet ingestion; build a standardized grain-photo evaluation dataset.
 
 ## Rill
 
@@ -55,7 +73,16 @@ Daily truck arrivals create a repeated visual-inspection and document-reading wo
 
 Four daily updates across 60 zones create 7,200 forecasts per farm each month. The work repeats because weather and field conditions change.
 
+**Azure services:**
+
+- [Azure IoT Hub](https://learn.microsoft.com/en-us/azure/iot-hub/iot-concepts-and-iot-hub): Receive authenticated soil, flow-meter and field-device readings. Planned integration.
+- [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-batch?view=azureml-api-2): Run repeated zone-level water-demand forecasts and evaluate them against actual field outcomes. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Explain the forecast, operating limit and uncertainty in a readable zone plan. Connector implemented · configure Azure deployment.
+- [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview): Track missing sensor data, forecast jobs and operator review exceptions. Planned integration.
+
 **Human review:** A farm operator checks sensor quality and local conditions before any watering decision. This MVP does not control pumps.
+
+**Next integration:** Connect sensor readings and weather data; train and evaluate a field-specific demand model.
 
 ## Coldline
 
@@ -69,7 +96,16 @@ Four daily updates across 60 zones create 7,200 forecasts per farm each month. T
 
 The same load is checked at multiple points. The value comes from combining visual condition with its changing storage and transport history.
 
+**Azure services:**
+
+- [Azure IoT Hub](https://learn.microsoft.com/en-us/azure/iot-hub/iot-concepts-and-iot-hub): Receive shipment temperature readings and equipment events from authorized devices. Planned integration.
+- [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-batch?view=azureml-api-2): Evaluate changes in produce images alongside the shipment’s temperature history. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Explain the condition warning and identify the evidence the receiving operator should check. Connector implemented · configure Azure deployment.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Keep checkpoint images and quality review records attached to the shipment. Planned integration.
+
 **Human review:** The warning supports an inspection. It does not certify food safety or replace a qualified quality decision.
+
+**Next integration:** Connect temperature devices, shipment references and checkpoint image capture.
 
 ## Plotmark
 
@@ -83,7 +119,16 @@ The same load is checked at multiple points. The value comes from combining visu
 
 The workload is long-document reading and comparison across many acquisition files. Unchanged pages can be cached; new revisions trigger a fresh comparison.
 
+**Azure services:**
+
+- [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout?view=doc-intel-4.0.0): Read supplied title schedules, planning documents and survey-page text while retaining page references. Planned integration.
+- [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview): Find the relevant parcel references and passages across a document package. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Compare conflicting document details and draft a question with exact source quotations. Connector implemented · configure Azure deployment.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Version the supplied acquisition file and the reviewed parcel report. Planned integration.
+
 **Human review:** It prepares a due-diligence brief. It does not confirm ownership, verify a registry entry or replace a lawyer or licensed surveyor.
+
+**Next integration:** Connect document upload, page extraction and parcel-reference indexing; validate quotation and version handling.
 
 ## Leasewell
 
@@ -97,7 +142,16 @@ The workload is long-document reading and comparison across many acquisition fil
 
 Each new pack requires a detailed read and cross-document check. Portfolio reviews repeat the work for changed agreements and approaching obligations.
 
+**Azure services:**
+
+- [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout?view=doc-intel-4.0.0): Extract clause text, tables and schedules from lease packs and amendments. Planned integration.
+- [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview): Retrieve the original clause and the later wording that may change it. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Prepare an obligation brief with cited clauses, dates and a human review action. Connector implemented · configure Azure deployment.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Keep the reviewed document versions and lease brief together. Planned integration.
+
 **Human review:** It supports lease administration. Legal interpretation, contractual notices and commercial decisions require the appointed professional.
+
+**Next integration:** Connect PDF lease packs and amendment versions; build a reviewed obligation schema.
 
 ## Brickwise
 
@@ -111,7 +165,16 @@ Each new pack requires a detailed read and cross-document check. Portfolio revie
 
 The model reviews fresh inspection imagery across a property portfolio and compares follow-up photos with the original defect record.
 
+**Azure services:**
+
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Keep inspection and follow-up images under a stable building and asset reference. Planned integration.
+- [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-batch?view=azureml-api-2): Run a trained inspection model over new images and group repeated candidate defects. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Combine image observations and technician notes into a draft repair list. Connector implemented · configure Azure deployment.
+- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions): Queue site inspections, track failures and avoid duplicate work orders for the same reviewed issue. Planned integration.
+
 **Human review:** An image cannot certify structural or equipment safety. A qualified professional inspects the condition and approves the work.
+
+**Next integration:** Connect asset-labelled photo uploads and technician notes; evaluate defect grouping before creating operational work orders.
 
 ## Watchpost
 
@@ -125,7 +188,16 @@ The model reviews fresh inspection imagery across a property portfolio and compa
 
 The scenario assumes 12 hours per day for 30 days. Sampling six frames per minute produces a large recurring computer-vision workload; full clips are escalated only for defined events.
 
+**Azure services:**
+
+- [Azure Machine Learning online endpoints](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-online?view=azureml-api-2): Host a trained event-detection model for sampled frames; GPU capacity depends on the chosen model and regional quota. Planned integration.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Retain authorized event clips and the reviewed time window according to the site’s retention policy. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Summarize a grouped event and the site rule without identifying a person. Connector implemented · configure Azure deployment.
+- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions): Deliver a single grouped review item to the supervisor and handle processing failures. Planned integration.
+
 **Human review:** No face identification or automatic emergency dispatch. A supervisor verifies every event and follows the site’s response procedure.
+
+**Next integration:** Connect an authorized test video source and train/evaluate the defined event detector; implement clip retention and event grouping.
 
 ## Gatehouse
 
@@ -139,7 +211,16 @@ The scenario assumes 12 hours per day for 30 days. Sampling six frames per minut
 
 New jobs and expiring documents create repeated reading and comparison work. The scope is contractor evidence, rather than a low-volume visitor register.
 
+**Azure services:**
+
+- [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout?view=doc-intel-4.0.0): Read training certificates, insurance schedules and work-permit evidence supplied for the job. Planned integration.
+- [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview): Find the requirement and the document passage that does or does not address it. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Compare dates and scope, then explain the missing evidence without authenticating a certificate. Connector implemented · configure Azure deployment.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Retain reviewed document versions under the contractor job pack. Planned integration.
+
 **Human review:** It checks supplied documents. It does not authenticate a certificate, identify a person or independently authorize workplace access.
+
+**Next integration:** Connect document intake, job requirements and expiry-date extraction; implement restricted evidence access.
 
 ## Proofline
 
@@ -153,4 +234,13 @@ New jobs and expiring documents create repeated reading and comparison work. The
 
 The scenario contains 384,000 pages per month. At an illustrative 500 input tokens per page, that is 192 million input tokens before answers, retries or additional review passes.
 
+**Azure services:**
+
+- [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout?view=doc-intel-4.0.0): Read policies, questionnaires and supporting reports with page and section references. Planned integration.
+- [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview): Find relevant policy passages using exact terms and meaning-based retrieval. Planned integration.
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Draft cited answers and explain unclear scope or contradictory evidence. Connector implemented · configure Azure deployment.
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Version the supplier evidence pack and the accepted review brief. Planned integration.
+
 **Human review:** A drafted answer is not an assurance opinion or certification. A qualified reviewer decides whether the evidence is sufficient.
+
+**Next integration:** Connect evidence upload and document indexing; evaluate answer scope and citation accuracy.

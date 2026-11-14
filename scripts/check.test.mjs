@@ -5,8 +5,11 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {brands,routes} from '../src/brands.mjs';
 import {enrichBrands} from '../src/ai-briefs.mjs';
+import {attachCompanyProfiles,about} from '../src/company-pages.mjs';
 enrichBrands(brands);
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const profiles=JSON.parse(await readFile(path.join(root,'src/company-profiles.json'),'utf8'));
+attachCompanyProfiles(brands,profiles);
 const docs=path.join(root,'docs');
 async function files(dir){const results=[];for(const entry of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);results.push(...(entry.isDirectory()?await files(p):[p]));}return results;}
 
@@ -46,11 +49,11 @@ test('AI workload scenarios reconcile and prepared findings cite supplied eviden
  }
 });
 
-test('all 150 brand pages have a title, a single main heading and a disclosure of demo scope',async()=>{
+test('all 190 brand pages have a title, a single main heading and accurate MVP scope',async()=>{
  let count=0;
  for(const brand of brands){
   const htmlFiles=(await files(path.join(docs,brand.slug))).filter(f=>f.endsWith('.html'));
-  assert.equal(htmlFiles.length,15);
+  assert.equal(htmlFiles.length,19);
   for(const filename of htmlFiles){
    const html=await readFile(filename,'utf8');
    assert.match(html,/<html lang="en">/);assert.match(html,/<title>[^<]+<\/title>/);
@@ -60,7 +63,7 @@ test('all 150 brand pages have a title, a single main heading and a disclosure o
    count++;
   }
  }
- assert.equal(count,150);
+ assert.equal(count,190);
 });
 
 test('every local link, image, script and CSS font in all published routes resolves',async()=>{
@@ -99,5 +102,53 @@ test('every independent site is portable without the collection or a build tool'
    const filename=path.join(standalone,route,'index.html');const content=await readFile(filename,'utf8');
    const published=await readFile(path.join(docs,brand.slug,route,'index.html'),'utf8');assert.equal(content,published);
   }
+ }
+});
+
+test('the ten homepages use different structures and three attributed industry photographs',async()=>{
+ const openings=['field-landscape','grain-masthead','rill-opening','cold-route-opening','plot-file-opening','lease-editorial','brick-opening','watch-opening','gate-dossier-opening','proof-opening'];
+ const images=new Set();
+ assert.equal(new Set(brands.map(b=>b.plan.composition)).size,10);
+ for(const [i,b] of brands.entries()){
+  const html=await readFile(path.join(docs,b.slug,'index.html'),'utf8');
+  assert.ok(html.includes(openings[i]),b.slug+' opening');
+  for(const file of ['hero.jpg','editorial-1.jpg','editorial-2.jpg']){
+   assert.ok(html.includes('assets/'+file),b.slug+': '+file);
+   const data=await readFile(path.join(docs,b.slug,'assets',file));
+   assert.equal(data[0],0xff);assert.equal(data[1],0xd8);images.add(data.toString('base64'));
+  }
+  const media=JSON.parse(await readFile(path.join(docs,b.slug,'assets/editorial-sources.json'),'utf8'));
+  assert.equal(media.length,2);
+  const terms=await readFile(path.join(docs,b.slug,'terms/index.html'),'utf8');
+  for(const item of media){assert.ok(item.source&&item.author&&item.license);assert.ok(terms.includes(item.source.replaceAll('&','&amp;')));}
+ }
+ assert.equal(images.size,30,'Each industry photo must be a separate asset');
+});
+
+test('company pages expose the real maintainer and omit unverified registration',async()=>{
+ for(const b of brands){
+  const team=await readFile(path.join(docs,b.slug,'team/index.html'),'utf8');
+  assert.ok(team.includes('Precious Arinze')&&team.includes('https://github.com/Uniqkode'));
+  const contact=await readFile(path.join(docs,b.slug,'contact/index.html'),'utf8');
+  assert.ok(contact.includes('/issues/new?title=')&&contact.includes('GitHub enquiries are public'));
+  const company=await readFile(path.join(docs,b.slug,'about/index.html'),'utf8');
+  assert.ok(!/RC[ -]?\d{3,}/.test(company));
+  assert.equal(b.company.rcNumber,null);
+ }
+ const brand=structuredClone(brands[0]);
+ const fake=structuredClone(profiles);fake.brands.fieldwell={legalName:'Unverified legal name',rcNumber:'RC0000000',registrationVerified:false};
+ attachCompanyProfiles([brand],fake);assert.ok(!about(brand).includes('RC0000000'));
+ fake.brands.fieldwell.registrationVerified=true;
+ assert.throws(()=>attachCompanyProfiles([brand],fake),/evidence reference/);
+});
+
+test('roadmaps distinguish built code from planned Azure services and pilots',async()=>{
+ for(const b of brands){
+  const roadmap=await readFile(path.join(docs,b.slug,'roadmap/index.html'),'utf8');
+  for(const stage of b.roadmap){assert.ok(roadmap.includes(stage.title));assert.ok(roadmap.includes(stage.status));}
+  assert.equal(b.roadmap.length,5);assert.equal(b.roadmap.filter(s=>s.status==='Built').length,1);
+  const technology=await readFile(path.join(docs,b.slug,'technology/index.html'),'utf8');
+  for(const service of b.plan.azure){assert.ok(technology.includes(service.name));assert.ok(technology.includes(service.url.replaceAll('&','&amp;')));assert.ok(technology.includes(service.status));}
+  assert.ok(technology.includes('Azure resources: configuration required'));
  }
 });

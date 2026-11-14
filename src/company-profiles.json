@@ -1,0 +1,21 @@
+{
+  "maintainer": {
+    "name": "Precious Arinze",
+    "handle": "Uniqkode",
+    "role": "Project maintainer",
+    "profile": "https://github.com/Uniqkode",
+    "portrait": "maintainer-avatar.jpg",
+    "verificationSource": "https://api.github.com/users/Uniqkode"
+  },
+  "defaults": {
+    "legalName": null,
+    "rcNumber": null,
+    "registrationVerified": false,
+    "registrationEvidence": null,
+    "contactEmail": null,
+    "phone": null,
+    "officeAddress": null,
+    "team": []
+  },
+  "brands": {}
+}

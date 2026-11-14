@@ -1,0 +1,34 @@
+[
+  {
+    "name": "plotmark-survey",
+    "query": "land surveying total station",
+    "title": "Land Survey (14207228023).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Land_Survey_%2814207228023%29.jpg/1920px-Land_Survey_%2814207228023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Land_Survey_%2814207228023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_Survey_(14207228023).jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Bureau of Land Management Oregon and Washington",
+    "description": "A surveyor using land measurement equipment",
+    "file": "editorial-1.jpg",
+    "width": 1125,
+    "height": 1500,
+    "modifications": "Resized and recompressed for website display; CSS may crop the displayed image."
+  },
+  {
+    "name": "plotmark-site",
+    "query": "construction land aerial",
+    "title": "Landal De Schouwse Valleien construction, Burgh-Haamstede.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Landal_De_Schouwse_Valleien_construction%2C_Burgh-Haamstede.jpg/1920px-Landal_De_Schouwse_Valleien_construction%2C_Burgh-Haamstede.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/Landal_De_Schouwse_Valleien_construction%2C_Burgh-Haamstede.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:Landal_De_Schouwse_Valleien_construction,_Burgh-Haamstede.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "author": "YosemiteYamper",
+    "description": "Aerial construction and land development context",
+    "file": "editorial-2.jpg",
+    "width": 1500,
+    "height": 1125,
+    "modifications": "Resized and recompressed for website display; CSS may crop the displayed image."
+  }
+]

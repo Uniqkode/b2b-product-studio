@@ -1,0 +1,32 @@
+[
+  {
+    "name": "watchpost-camera",
+    "url": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1500&q=80&fm=jpg",
+    "original": "https://images.unsplash.com/photo-1557597774-9d273605dfa9",
+    "source": "https://images.unsplash.com/photo-1557597774-9d273605dfa9",
+    "license": "Unsplash license",
+    "license_url": "https://unsplash.com/license",
+    "author": "Photography via Unsplash",
+    "title": "watchpost camera",
+    "file": "editorial-1.jpg",
+    "width": 1500,
+    "height": 1008,
+    "modifications": "Resized and recompressed for website display; CSS may crop the displayed image.",
+    "description": "Security cameras mounted on a building"
+  },
+  {
+    "name": "watchpost-center",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Security_control_room%2C_Cairns_Hospital%2C_2025.jpg/1920px-Security_control_room%2C_Cairns_Hospital%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/Security_control_room%2C_Cairns_Hospital%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:Security_control_room,_Cairns_Hospital,_2025.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "author": "Chris Olszewski",
+    "title": "Security control room, Cairns Hospital, 2025.jpg",
+    "file": "editorial-2.jpg",
+    "width": 1469,
+    "height": 1500,
+    "modifications": "Resized and recompressed; CSS display cropping.",
+    "description": "Security operations monitoring context"
+  }
+]

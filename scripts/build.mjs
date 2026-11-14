@@ -6,10 +6,15 @@ import * as t from '../src/templates.mjs';
 import * as ai from '../src/ai-pages.mjs';
 import {enrichBrands} from '../src/ai-briefs.mjs';
 import {writeGuides} from './write-guides.mjs';
+import * as bespoke from '../src/bespoke-pages.mjs';
+import * as company from '../src/company-pages.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const out=path.join(root,'docs');
 enrichBrands(brands);
+const companyProfiles=JSON.parse(await readFile(path.join(root,'src/company-profiles.json'),'utf8'));
+company.attachCompanyProfiles(brands,companyProfiles);
+const editorialMedia=JSON.parse(await readFile(path.join(root,'src/assets/editorial/sources.json'),'utf8'));
 await mkdir(out,{recursive:true});
 const fontCSS=await readFile(path.join(root,'src/assets/fonts.css'),'utf8');
 const licenses=await readFile(path.join(root,'src/assets/FONT-LICENSES.txt'),'utf8').catch(()=>`Fonts are distributed by Google Fonts under their open font licenses.\nSources: https://github.com/google/fonts\nFamilies: ${[...new Set(brands.flatMap(b=>[b.headingFont,b.bodyFont]))].join(', ')}\n`);
@@ -27,13 +32,22 @@ for(const b of brands){
  await writeFile(path.join(site,'assets/fonts.css'),selectedCSS);
  for(const name of new Set([...selectedCSS.matchAll(/url\(([^)]+)\)/g)].map(x=>x[1]))){await copyFile(path.join(root,'src/assets',name),path.join(site,'assets',name));}
  await copyFile(path.join(root,'src/assets',b.image+'.jpg'),path.join(site,'assets/hero.jpg'));
- for(const file of ['style.css','product.css','app.js','ai-workspace.js'])await copyFile(path.join(root,'src',file),path.join(site,'assets',file));
+ for(const file of ['style.css','product.css','brand-designs.css','app.js','ai-workspace.js','brand-interactions.js'])await copyFile(path.join(root,'src',file),path.join(site,'assets',file));
+ const gallery=[];
+ for(const [i,name] of b.plan.gallery.entries()){
+  const media=editorialMedia.find(item=>item.name===name&&!item.error);if(!media)throw new Error('Missing licensed image: '+name);
+  await copyFile(path.join(root,'src/assets/editorial',media.file),path.join(site,'assets',`editorial-${i+1}.jpg`));
+  gallery.push({...media,file:`editorial-${i+1}.jpg`,description:b.plan.galleryAlt[i]});
+ }
+ await copyFile(path.join(root,'src/assets/editorial/maintainer-avatar.jpg'),path.join(site,'assets/maintainer-avatar.jpg'));
+ b.photography=gallery;
  await writeFile(path.join(site,'assets/logo.svg'),t.standaloneLogo(b));
  await writeFile(path.join(site,'assets/FONT-LICENSES.txt'),licenses);
  await writeFile(path.join(site,'assets/image-sources.json'),JSON.stringify({asset:'hero.jpg',original:photoSources[b.image].original||`https://images.unsplash.com/${b.photoId}`,source:photoSources[b.image].url,credit:b.photoCredit,license:b.photoLicense,description:b.imageAlt,modification:b.slug==='plotmark'?'Resized and JPEG-compressed; CSS crops and graphic overlay applied in the page. Original photograph remains CC BY-SA 4.0.':'Resized for website display.'},null,2)+'\n');
+ await writeFile(path.join(site,'assets/editorial-sources.json'),JSON.stringify(gallery,null,2)+'\n');
  await writeFile(path.join(site,'assets/config.js'),'window.BRAND = '+JSON.stringify(b).replace(/</g,'\\u003c')+';\n');
  const pages={
-  '':ai.home(b),'product':ai.product(b),'technology':ai.technology(b),'pricing':t.pricingPage(b),'about':ai.about(b),'security':t.securityPage(b),'contact':t.contactPage(b),'privacy':t.legalPage(b,'privacy'),'terms':t.legalPage(b,'terms'),'blog':t.blogPage(b),'blog/operating-note':t.blogPage(b,'operating-note'),'blog/working-record':t.blogPage(b,'working-record'),'login':t.loginPage(b),'dashboard':ai.dashboard(b,t.dashboardPage(b))
+  '':bespoke.home(b),'product':bespoke.product(b),'technology':bespoke.technology(b),'pricing':t.pricingPage(b),'about':company.about(b),'team':company.team(b),'roadmap':company.roadmap(b),'security':t.securityPage(b),'contact':company.contact(b),'privacy':t.legalPage(b,'privacy'),'ai-policy':company.policy(b,'ai'),'data-policy':company.policy(b,'data'),'terms':company.terms(b,t.legalPage(b,'terms')),'blog':t.blogPage(b),'blog/operating-note':t.blogPage(b,'operating-note'),'blog/working-record':t.blogPage(b,'working-record'),'login':t.loginPage(b),'dashboard':ai.dashboard(b,t.dashboardPage(b))
  };
  for(const [route,html] of Object.entries(pages)){const dir=path.join(site,route);await mkdir(dir,{recursive:true});await writeFile(path.join(dir,'index.html'),html);}
  await writeFile(path.join(site,'404.html'),t.notFoundPage(b));

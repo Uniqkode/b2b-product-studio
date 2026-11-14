@@ -1,46 +1,33 @@
-# Verification — AI product revision
+# Verification — distinct websites and Azure roadmaps
 
-## Automated checks
+## Local checks
 
-The revised build passed **14 automated test groups** covering all ten products and the optional server adapter:
+The revision passed **20 automated test groups** across the ten websites and the optional AI adapter. The build creates **190 brand HTML pages** (18 routes and a 404 per product). Checks cover single main headings, working local references, reconciled sample totals, accurate workload formulas, source quotations, ten different page structures, thirty separate industry photos with attribution, real maintainer information, omitted unverified registrations, and product-specific roadmap/Azure statuses.
 
-- Sample register totals reconcile with the fixture records.
-- Ten distinct marks, layouts and identity directions remain present, with local font and photo licensing.
-- AI workload formulas reconcile with the published configuration.
-- Every prepared finding cites a supplied source and quotes text that is actually present there.
-- All 150 brand HTML pages have metadata, a single main heading and a sample-data disclosure.
-- Local pages, styles, scripts, images and font references resolve.
-- Standalone outputs match the published collection copies.
-- The unconfigured AI adapter makes no provider request and reveals no key.
-- Service authentication, allowed browser origins, input limits and image type checks are enforced.
-- Repeated and overlapping identical requests share cached/in-flight work.
-- Provider calls request bounded structured output and disable provider-side response storage with `store: false`.
-- Invented source references and text quotations are rejected.
+Backend checks cover authentication, explicit allowed origins, input limits, caching and shared in-flight requests, structured provider output and rejected invented quotations. Azure tests validate resource endpoints, deployment names, API-key and Microsoft Entra authentication, incomplete configuration handling, and health responses that omit credentials and resource details.
 
-The existing Happy DOM runner passed **120 interaction groups** for login, register operations, search, status filtering, notes, completion/reopening, record creation, recalculated totals, CSV formula escaping, persistence, pricing, the workload planner, mobile-menu state and local pilot briefs.
+**206 DOM interaction groups passed:** 120 operational workspace/form groups; 80 evidence-review and connected-service boundary groups; six additional field-selector, intake-filter and document-library groups on home and product pages. Connected provider responses are mocked. No paid model call, cloud deployment or Azure credit use was performed by these tests.
 
-The new AI runner passed **80 additional interaction groups** across the ten products. It checks prepared runs without network calls, exact citation highlighting, accepting reports for human review, downloads, alternate cases, report persistence, connected-mode usage and safe text rendering, and recovery from an unconfigured service.
-
-Connected-provider responses in automated tests are mocked. **No paid model request or actual credit usage was claimed or incurred by these checks.** The optional server adapter requires the user's configured provider account before it can make a live call.
-
-## Repeat the interaction checks
+## Repeat the checks
 
 ```sh
-npm install --prefix /tmp/b2b-studio-qa --cache /tmp/b2b-studio-npm-cache happy-dom@20.8.4 --no-audit --no-fund
+npm run build
+npm test
 B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-interactions.mjs
 B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-ai-interactions.mjs
+B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-design-interactions.mjs
 ```
 
-Happy DOM is a simulation, not a real browser. Its decimal-step check is disabled in the fixture because it uses binary floating-point modulo; the application's own positive-value and maximum checks still run.
+The DOM runners require Happy DOM (20.8.4 used here). Happy DOM simulates interactions and does not render visual layouts. Its decimal-step constraint is disabled only in the fixture because of its binary floating-point modulo behavior; the application’s positive-value and maximum checks still run.
 
 ## Visual verification limit
 
-The managed preview relay again failed to open browser port 4173. No substitute browser-control path was used. Responsive layouts and readable text sizes are implemented, but real-browser screenshots and viewport checks remain unverified.
+The managed preview relay failed to open browser port 4173. Its stopped state was confirmed, and no substitute browser-control path was used. Responsive styles and larger text are implemented, but real-browser viewport screenshots remain unverified.
 
-## Publication
+## Publication verification
 
-The primary destination is https://uniqkode.github.io/b2b-product-studio/ . The existing owner-private Sites copy is https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site . The latest `live-check-results.json` records HTTPS status and SHA-256 comparisons for the published release.
+Public destination: https://uniqkode.github.io/b2b-product-studio/ . The existing owner-private Sites copy preserves its current access at https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site .
 
-Workload totals are explicit planning scenarios, not actual customers, usage, model accuracy, certifications or cloud-credit eligibility evidence. Prepared reports and professional limits remain visible in the product experience.
+After publication, `python scripts/check-live.py` compares every brand page and fourteen key assets per product by HTTPS status and SHA-256. The current release evidence is recorded in `qa/live-check-results.json` and the release note below.
 
-The revised GitHub Pages release (`194eda679610d82641e409c7a7f3ecf261e07080`) deployed successfully in run https://github.com/Uniqkode/b2b-product-studio/actions/runs/43582949626 . All **221** checked public pages and key assets returned HTTP 200 and exactly matched the revised local output by SHA-256. The owner-private Sites deployment also returned `succeeded` for the same source commit.
+Workload estimates remain planning assumptions. Azure OpenAI connector code is implemented; real deployment, sector integration, pilots, telemetry and production accounts remain the appropriate next stages. No generic RC number, invented staff, customer endorsement or deployed Azure consumption is published.

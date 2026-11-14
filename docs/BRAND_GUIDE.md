@@ -1,6 +1,6 @@
-# Brand guide — product-led revision
+# Brand guide — ten individual compositions
 
-Ten distinct identities with larger, consistent reading text. Product screens and evidence-led reports carry the story. Photography is licensed and locally hosted; no AI-generated people or customer imagery is used. Brand names remain concepts without trademark clearance.
+The sites use different opening structures, photograph sequences, navigation treatments and editorial rhythms. Each keeps the working review tool, readable local fonts and its original SVG mark. The thirty industry photographs are licensed and locally hosted. Names have not been cleared for trademark or commercial registration.
 
 ## Fieldwell
 
@@ -9,13 +9,13 @@ Ten distinct identities with larger, consistent reading text. Product screens an
 AI checks field photos and shows agronomists where to inspect next.
 
 - **Buyer:** Commercial growers & agronomy teams.
-- **Typography:** Manrope headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #17392c, paper #f6f8f3, accent #086b50, dark band #123c2d.
-- **Signature:** Field contours.
-- **Logo rationale:** Three cultivated rows bend into an F; an open seed shape leaves room for growth.
-- **Composition:** pastoral cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Assign an inspection.
+- **Design:** Field atlas.
+- **Flow:** Landscape opening → field map → scouting photography → survey report → Azure batch path → seasonal roadmap.
+- **Typography:** DM Serif Display headings; DM Sans body.
+- **Palette:** ink #17392c, paper #f6f8f3, accent #086b50.
+- **Logo:** Three cultivated rows bend into an F; an open seed shape leaves room for growth.
+- **Photography:** original lead image plus Healthy corn rows in a cultivated field; Maize leaf and crop condition photograph. Sources and licenses appear on Terms & credits.
+- **Action:** Assign an inspection.
 
 ## GrainLedger
 
@@ -24,13 +24,13 @@ AI checks field photos and shows agronomists where to inspect next.
 AI reviews grain photos and intake documents before a lot is released.
 
 - **Buyer:** Grain aggregators & warehouse quality teams.
-- **Typography:** IBM Plex Sans headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #293443, paper #f5f6f8, accent #e6a92e, dark band #1d2939.
-- **Signature:** Ruled ledger with stamped lot numbers.
-- **Logo rationale:** Interlocking G and L strokes form a warehouse tally with three grain bars.
-- **Composition:** ledger cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Record quality decision.
+- **Design:** Warehouse ledger.
+- **Flow:** Ledger masthead → intake book → warehouse photo spread → weight comparison → quality desk → processing stack → rollout ledger.
+- **Typography:** IBM Plex Sans headings; Manrope body.
+- **Palette:** ink #293443, paper #f5f6f8, accent #e6a92e.
+- **Logo:** Interlocking G and L strokes form a warehouse tally with three grain bars.
+- **Photography:** original lead image plus Modern warehouse storage and handling; Combine harvester working in a wheat field. Sources and licenses appear on Terms & credits.
+- **Action:** Record quality decision.
 
 ## Rill
 
@@ -39,13 +39,13 @@ AI reviews grain photos and intake documents before a lot is released.
 AI forecasts crop water demand and gives irrigation teams a daily zone plan.
 
 - **Buyer:** Commercial farms & irrigation cooperatives.
-- **Typography:** Outfit headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #173b44, paper #eef6f7, accent #007e9a, dark band #143c46.
-- **Signature:** Rill channels and measured water rings.
-- **Logo rationale:** An R made from two flowing channels; the counter is a water drop.
-- **Composition:** water cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Approve the watering plan.
+- **Design:** Irrigation planning studio.
+- **Flow:** Centered water statement → irrigation panorama → zone planner → field conditions → forecasting service path → water-cycle roadmap.
+- **Typography:** Outfit headings; DM Sans body.
+- **Palette:** ink #173b44, paper #eef6f7, accent #007e9a.
+- **Logo:** An R made from two flowing channels; the counter is a water drop.
+- **Photography:** original lead image plus Drip irrigation equipment in a cultivated field; An irrigation channel beside cultivated fields. Sources and licenses appear on Terms & credits.
+- **Action:** Approve the watering plan.
 
 ## Coldline
 
@@ -54,13 +54,13 @@ AI forecasts crop water demand and gives irrigation teams a daily zone plan.
 AI reviews produce images and temperature histories to flag shipments at risk.
 
 - **Buyer:** Produce exporters & cold-chain operators.
-- **Typography:** Space Grotesk headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #1a384b, paper #f3f8fa, accent #136f99, dark band #143347.
-- **Signature:** Temperature trace and cargo-label corners.
-- **Logo rationale:** A squared C encloses a temperature line; the open edge represents goods moving through.
-- **Composition:** cold cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Assign a cold-chain check.
+- **Design:** Cold-chain journey.
+- **Flow:** Route opening → three checkpoint photographs → excursion timeline → condition brief → logistics architecture → checkpoint roadmap.
+- **Typography:** Space Grotesk headings; Manrope body.
+- **Palette:** ink #1a384b, paper #f3f8fa, accent #136f99.
+- **Logo:** A squared C encloses a temperature line; the open edge represents goods moving through.
+- **Photography:** original lead image plus Warehouse picking and storage aisles; A refrigerated logistics truck. Sources and licenses appear on Terms & credits.
+- **Action:** Assign a cold-chain check.
 
 ## Plotmark
 
@@ -69,13 +69,13 @@ AI reviews produce images and temperature histories to flag shipments at risk.
 AI compares land documents and survey references before an acquisition review.
 
 - **Buyer:** Property developers & acquisition teams.
-- **Typography:** DM Sans headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #253d47, paper #f3f5f6, accent #c46431, dark band #253f49.
-- **Signature:** Survey crosshairs, parcel outlines and coordinates.
-- **Logo rationale:** A parcel outline folds into a P, anchored by a survey pin at its baseline.
-- **Composition:** survey cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Send for professional review.
+- **Design:** Survey and parcel desk.
+- **Flow:** Parcel workspace → survey context → document comparison → acquisition questions → Azure document pipeline → due-diligence roadmap.
+- **Typography:** DM Sans headings; Manrope body.
+- **Palette:** ink #253d47, paper #f3f5f6, accent #c46431.
+- **Logo:** A parcel outline folds into a P, anchored by a survey pin at its baseline.
+- **Photography:** original lead image plus A surveyor using land measurement equipment; Aerial construction and land development context. Sources and licenses appear on Terms & credits.
+- **Action:** Send for professional review.
 
 ## Leasewell
 
@@ -84,13 +84,13 @@ AI compares land documents and survey references before an acquisition review.
 AI reads commercial leases and amendments, then lists the obligations that need action.
 
 - **Buyer:** Commercial property & asset managers.
-- **Typography:** Manrope headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #243652, paper #f5f6f9, accent #2a58ba, dark band #192c4c.
-- **Signature:** Architectural arches and inset editorial captions.
-- **Logo rationale:** An open arch meets a ledger baseline: the building and the lease in one quiet mark.
-- **Composition:** editorial cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Assign the lease action.
+- **Design:** Commercial property journal.
+- **Flow:** Editorial architecture opening → amendment story → lease abstract → property photography → obligation review → clause-processing stack → portfolio roadmap.
+- **Typography:** Instrument Serif headings; DM Sans body.
+- **Palette:** ink #243652, paper #f5f6f9, accent #2a58ba.
+- **Logo:** An open arch meets a ledger baseline: the building and the lease in one quiet mark.
+- **Photography:** original lead image plus Contemporary architectural building exterior; Commercial office and meeting spaces. Sources and licenses appear on Terms & credits.
+- **Action:** Assign the lease action.
 
 ## Brickwise
 
@@ -99,13 +99,13 @@ AI reads commercial leases and amendments, then lists the obligations that need 
 AI reviews building inspection images and notes, then drafts an evidence-linked repair list.
 
 - **Buyer:** Facility managers & building operators.
-- **Typography:** Barlow Condensed headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #27302d, paper #f4f3ef, accent #e9ae29, dark band #303735.
-- **Signature:** Work-order tabs and offset masonry blocks.
-- **Logo rationale:** Offset masonry units build a B with an open service passage through the center.
-- **Composition:** industrial cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Create the reviewed work order.
+- **Design:** Maintenance operating board.
+- **Flow:** Industrial work-order opening → annotated building image → maintenance board → technician detail → inspection review → vision processing stack → asset rollout.
+- **Typography:** Barlow Condensed headings; Manrope body.
+- **Palette:** ink #27302d, paper #f4f3ef, accent #e9ae29.
+- **Logo:** Offset masonry units build a B with an open service passage through the center.
+- **Photography:** original lead image plus Hands-on electronic equipment repair; Large commercial building exterior. Sources and licenses appear on Terms & credits.
+- **Action:** Create the reviewed work order.
 
 ## Watchpost
 
@@ -114,13 +114,13 @@ AI reviews building inspection images and notes, then drafts an evidence-linked 
 AI checks site video for defined events and sends supervisors the relevant clip.
 
 - **Buyer:** Contract security operators & site supervisors.
-- **Typography:** Space Grotesk headings; DM Sans body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #e5efed, paper #111d1d, accent #c0e58d, dark band #0a1416.
-- **Signature:** Observation brackets and quiet radar lines.
-- **Logo rationale:** Two observation brackets and a central line make a W without a conventional shield.
-- **Composition:** command cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Record the supervisor response.
+- **Design:** Security command desk.
+- **Flow:** Dark multi-monitor opening → event timeline → supervisor feed → camera context → event rules → Azure video architecture → monitored rollout.
+- **Typography:** Space Grotesk headings; DM Sans body.
+- **Palette:** ink #e5efed, paper #111d1d, accent #c0e58d.
+- **Logo:** Two observation brackets and a central line make a W without a conventional shield.
+- **Photography:** original lead image plus Security cameras mounted on a building; Security operations monitoring context. Sources and licenses appear on Terms & credits.
+- **Action:** Record the supervisor response.
 
 ## Gatehouse
 
@@ -129,13 +129,13 @@ AI checks site video for defined events and sends supervisors the relevant clip.
 AI reads contractor documents and flags missing or expired evidence for a reviewer.
 
 - **Buyer:** Industrial workplaces & facilities teams.
-- **Typography:** Manrope headings; Manrope body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #392e3b, paper #f6f5f2, accent #be403f, dark band #38313c.
-- **Signature:** Doorway arches and stamped visitor passes.
-- **Logo rationale:** A doorway cut from a G creates a welcoming entrance with a clear boundary.
-- **Composition:** welcome cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Request the missing evidence.
+- **Design:** Contractor assurance dossier.
+- **Flow:** Contractor dossier opening → worksite portrait spread → document pass → requirement checklist → evidence review → Azure reading stack → approval-stage roadmap.
+- **Typography:** Fraunces headings; Manrope body.
+- **Palette:** ink #392e3b, paper #f6f5f2, accent #be403f.
+- **Logo:** A doorway cut from a G creates a welcoming entrance with a clear boundary.
+- **Photography:** original lead image plus Construction workers wearing safety helmets; Construction team at a development site. Sources and licenses appear on Terms & credits.
+- **Action:** Request the missing evidence.
 
 ## Proofline
 
@@ -144,11 +144,11 @@ AI reads contractor documents and flags missing or expired evidence for a review
 AI compares supplier security documents with your questions and cites the answers.
 
 - **Buyer:** Procurement & information-security teams.
-- **Typography:** IBM Plex Sans headings; IBM Plex Sans body. Body copy and interface controls use readable sizes; display text is restrained.
-- **Palette:** ink #233e3d, paper #f3f6f5, accent #116f68, dark band #193c3a.
-- **Signature:** Evidence reference lines and annotated document margins.
-- **Logo rationale:** A continuous P-shaped evidence line ends in a small verified square, without implying certification.
-- **Composition:** assurance cover, product result preview, working evidence review and a documented workload scenario.
-- **Motion:** restrained focus/hover changes and native disclosures; no decorative autoplay.
-- **Primary product action:** Send the evidence request.
+- **Design:** Vendor evidence workspace.
+- **Flow:** Evidence review interface → policy/question comparison → document library → evidence gaps → security context → Azure retrieval stack → assurance roadmap.
+- **Typography:** IBM Plex Sans headings; IBM Plex Sans body.
+- **Palette:** ink #233e3d, paper #f3f6f5, accent #116f68.
+- **Logo:** A continuous P-shaped evidence line ends in a small verified square, without implying certification.
+- **Photography:** original lead image plus Data-center server equipment and network cabling; Network switching and infrastructure cables. Sources and licenses appear on Terms & credits.
+- **Action:** Send the evidence request.
 

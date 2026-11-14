@@ -89,7 +89,7 @@
     if(files.files.length>4)throw new Error('Choose at most four test images.');
     button.disabled=true;status.textContent='Checking the configured service…';
     const origin=url.href.replace(/\/$/,'');const health=await fetch(origin+'/api/health',{signal:controller.signal}).then(r=>r.json());
-    if(!health.configured)throw new Error('The service has no AI key configured. Set the key on the server before running analysis.');
+    if(!health.configured)throw new Error('The AI service is not fully configured. Set its provider credentials and, for Azure, the resource endpoint and deployment name on the server.');
     const inputs=[];if(text)inputs.push({id:'S1',name:'User test material',kind:'text',text});
     for(const [index,file] of [...files.files].entries()){
      if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>2*1024*1024)throw new Error('Use JPEG, PNG or WebP test images up to 2 MB each.');

@@ -100,4 +100,4 @@ export const photoSources = {
   office: {id:'photo-1497366216548-37526070297c', credit:'Modern office photography', url:'https://unsplash.com'}
 };
 
-export const routes = ['','product','technology','pricing','about','security','contact','privacy','terms','blog','login','dashboard'];
+export const routes = ['','product','technology','pricing','about','team','roadmap','security','contact','privacy','ai-policy','data-policy','terms','blog','login','dashboard'];

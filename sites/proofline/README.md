@@ -13,32 +13,53 @@ For procurement and information-security teams. Proofline reads policies, questi
 
 A drafted answer is not an assurance opinion or certification. A qualified reviewer decides whether the evidence is sufficient.
 
-## Try the workspace
+## Design
 
-Serve `dist/` using any static HTTP server. There is no dependency installation or build step for the standalone website. Use `demo@proofline.example` and `MVPdemo2026!`, or the one-click preview. This is demonstration access, not production authentication.
+**Vendor evidence workspace.** Evidence review interface → policy/question comparison → document library → evidence gaps → security context → Azure retrieval stack → assurance roadmap.
 
-Choose a prepared case, run the analysis, open a cited source, accept the report for human review and download it. The dashboard retains reports in this browser and supports operational records, notes, completion/reopening, filters, sorting and CSV export. Prepared sample runs make no model request.
-
-## Connected AI
-
-The complete repository includes the optional [AI server adapter](../../server/README.md). It can analyze test text and images with a configured server-side provider key. The standalone static output cannot keep a provider key or run a server. Do not put credentials in its JavaScript.
-
-## Workload planning
-
-60 hypothetical organizations × 40 vendor reviews per team / month × 1 read per new or changed pack × 160 pages per vendor pack = **384,000 document pages / month**.
-
-The scenario contains 384,000 pages per month. At an illustrative 500 input tokens per page, that is 192 million input tokens before answers, retries or additional review passes.
-
-These are planning assumptions, not live usage or customer traction.
-
-## Identity
-
-Heading: IBM Plex Sans. Body: IBM Plex Sans. Accent: #116f68. Signature: Evidence reference lines and annotated document margins.
+Heading: IBM Plex Sans. Body: IBM Plex Sans. Accent: #116f68.
 
 Logo: A continuous P-shaped evidence line ends in a small verified square, without implying certification.
 
-SVG: `dist/assets/logo.svg`. Photography and font notices are in `dist/assets/image-sources.json` and `dist/assets/FONT-LICENSES.txt`.
+The standalone site contains 18 routed pages plus its 404 page, including team, contact, roadmap, privacy, data policy and responsible AI policy. Three industry photographs are included locally. Source, author, license and modification details are in `dist/assets/image-sources.json`, `dist/assets/editorial-sources.json` and Terms & credits. Font licenses are in `dist/assets/FONT-LICENSES.txt`.
 
-## Scope
+## Try the workspace
 
-Prepared data is illustrative. Browser-local edits, reports and drafts are not synchronized between users. Connected analysis transmits the entered material only when that mode is explicitly run. No production identity, camera/sensor ingestion, OCR pipeline, professional certification or automatic operational control is implied.
+Serve `dist/` using any static HTTP server. No dependency installation or build step is needed for this standalone output. Use `demo@proofline.example` and `MVPdemo2026!`, or the one-click sample workspace. This is public demo access, not production authentication.
+
+Choose a prepared case, run the review, open a citation, retain the report for human review and download it. Operational records support creation, notes, status changes, search, filters, sorting and CSV export. Prepared runs make no model request.
+
+## Azure architecture
+
+- [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout?view=doc-intel-4.0.0): Read policies, questionnaires and supporting reports with page and section references. **Planned integration.**
+- [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview): Find relevant policy passages using exact terms and meaning-based retrieval. **Planned integration.**
+- [Azure OpenAI in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses): Draft cited answers and explain unclear scope or contradictory evidence. **Connector implemented · configure Azure deployment.**
+- [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview): Version the supplier evidence pack and the accepted review brief. **Planned integration.**
+
+The repository includes the optional [server-side Azure OpenAI and OpenAI adapter](../../server/README.md). Azure use requires a deployed compatible model, resource endpoint and server credentials. No Azure resource is connected by the public static site. GitHub Pages cannot execute the server or keep a secret.
+
+## Development roadmap
+
+- **01. Product foundation — Built:** Website, review workspace, source citations, report retention, operational register and downloads are implemented.
+- **02. Azure model connection — Ready to configure:** Azure OpenAI connector code and configuration checks are implemented. A deployed model, endpoint and server-side credentials are still required.
+- **03. Sector data integration — Planned:** Connect evidence upload and document indexing; evaluate answer scope and citation accuracy.
+- **04. Reviewed field pilot — Planned:** Have security reviewers compare drafted answers with the source policies and measure unsupported or missed evidence.
+- **05. Production operations — Planned:** Implement verified accounts, organization access, audit history, retention controls, monitoring and measured capacity limits before commercial operation.
+
+## Workload planning
+
+60 hypothetical organizations × 40 vendor reviews per team / month × 1 read per new or changed pack × 160 pages per vendor pack = **384,000 document pages per month**.
+
+The scenario contains 384,000 pages per month. At an illustrative 500 input tokens per page, that is 192 million input tokens before answers, retries or additional review passes.
+
+These assumptions do not establish actual customers, Azure consumption or model accuracy.
+
+## Company details and contact
+
+The team page identifies the public repository maintainer, Precious Arinze / Uniqkode. Responsibility areas are described without inventing staff appointments. Contact links open a public product enquiry; the pilot form saves a local brief and sends no email.
+
+Legal names and RC numbers are managed in `src/company-profiles.json` in the complete repository. Registration is unpublished unless the record has `registrationVerified: true`, a genuine legal name and RC number, and an evidence reference. Do not use placeholder registrations in applications.
+
+## Current scope
+
+Prepared operational cases use sample data. Browser-local edits and reports are not shared between users. Connected analysis sends entered material only when explicitly run. Shared accounts, sector ingestion, OCR, trained vision/forecast models, retention and production monitoring remain work described by the roadmap.

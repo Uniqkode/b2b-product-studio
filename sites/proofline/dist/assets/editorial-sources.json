@@ -1,0 +1,32 @@
+[
+  {
+    "name": "proofline-server",
+    "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1500&q=80&fm=jpg",
+    "original": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "source": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "license": "Unsplash license",
+    "license_url": "https://unsplash.com/license",
+    "author": "Photography via Unsplash",
+    "title": "proofline server",
+    "file": "editorial-1.jpg",
+    "width": 1500,
+    "height": 842,
+    "modifications": "Resized and recompressed for website display; CSS may crop the displayed image.",
+    "description": "Data-center server equipment and network cabling"
+  },
+  {
+    "name": "proofline-network",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Netgear_Gigabit_Switch_5-port.jpg/1920px-Netgear_Gigabit_Switch_5-port.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Netgear_Gigabit_Switch_5-port.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:Netgear_Gigabit_Switch_5-port.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "author": "Simon A. Eugster",
+    "title": "Netgear Gigabit Switch 5-port.jpg",
+    "file": "editorial-2.jpg",
+    "width": 1500,
+    "height": 994,
+    "modifications": "Resized and recompressed; CSS display cropping.",
+    "description": "Network switching and infrastructure cables"
+  }
+]

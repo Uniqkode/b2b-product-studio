@@ -2,11 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {once} from 'node:events';
 import {createAIService,validateInputs,callProvider} from './ai-service.mjs';
+import {resolveProviderConfiguration} from './provider-config.mjs';
 
 const evidence={brand:'leasewell',inputs:[{id:'S1',name:'Lease amendment',kind:'text',text:'The notice period is 120 days. Annual rent is ₦30,000,000.'}]};
 const report={title:'Notice review',summary:'Confirm the revised notice period.',findings:[{title:'Use the amended notice period',level:'Review',source:'S1',quote:'The notice period is 120 days.',action:'Ask the appointed reviewer to confirm the deadline.'}]};
 async function start(t,options={}){
- const server=createAIService(options);server.listen(0,'127.0.0.1');await once(server,'listening');
+ const server=createAIService({providerName:'openai',...options});server.listen(0,'127.0.0.1');await once(server,'listening');
  t.after(()=>new Promise(resolve=>{server.close(resolve);server.closeAllConnections();}));
  return 'http://127.0.0.1:'+server.address().port;
 }
@@ -59,4 +60,39 @@ test('invented sources and quotations are rejected before a report is returned',
  for(const finding of [{...report.findings[0],source:'S99'},{...report.findings[0],quote:'This passage is not in the source.'}]){
   await assert.rejects(callProvider({...evidence,key:'test-key',model:'test',fetchImpl:async()=>({ok:true,json:async()=>({output:[{content:[{type:'output_text',text:JSON.stringify({...report,findings:[finding]})}]}]})})}));
  }
+});
+
+test('Azure configuration accepts only resource endpoints and requires deployment plus authentication',()=>{
+ for(const endpoint of ['http://trial.openai.azure.com','https://trial.openai.azure.com.evil.example','https://api.openai.com','https://name:password@trial.openai.azure.com','https://trial.openai.azure.com/?api-key=secret','https://trial.openai.azure.com/openai/deployments/demo']){
+  assert.throws(()=>resolveProviderConfiguration({AI_PROVIDER:'azure',AZURE_OPENAI_ENDPOINT:endpoint}));
+ }
+ for(const env of [{},{AZURE_OPENAI_ENDPOINT:'https://trial.openai.azure.com'},{AZURE_OPENAI_ENDPOINT:'https://trial.openai.azure.com',AZURE_OPENAI_DEPLOYMENT:'review-model'}]){
+  assert.equal(resolveProviderConfiguration({AI_PROVIDER:'azure',...env}).configured,false);
+ }
+ const config=resolveProviderConfiguration({AI_PROVIDER:'azure',AZURE_OPENAI_ENDPOINT:'https://trial.openai.azure.com/openai/v1/',AZURE_OPENAI_DEPLOYMENT:'review-deployment',AZURE_OPENAI_API_KEY:'fixture-key'});
+ assert.equal(config.url,'https://trial.openai.azure.com/openai/v1/responses');assert.equal(config.configured,true);
+});
+
+test('Azure calls use the deployment name and server-only API key or Entra bearer token',async()=>{
+ for(const authentication of [{AZURE_OPENAI_API_KEY:'fixture-api-key'},{AZURE_OPENAI_AUTH_TOKEN:'fixture-entra-token'}]){
+  const config=resolveProviderConfiguration({AI_PROVIDER:'azure',AZURE_OPENAI_ENDPOINT:'https://trial.openai.azure.com',AZURE_OPENAI_DEPLOYMENT:'review-deployment',...authentication});
+  const result=await callProvider({...evidence,providerConfig:config,fetchImpl:async(url,options)=>{
+   assert.equal(url,'https://trial.openai.azure.com/openai/v1/responses');
+   const body=JSON.parse(options.body);assert.equal(body.model,'review-deployment');assert.equal(body.store,false);
+   if(authentication.AZURE_OPENAI_API_KEY){assert.equal(options.headers['api-key'],'fixture-api-key');assert.equal(options.headers.Authorization,undefined);}
+   else{assert.equal(options.headers.Authorization,'Bearer fixture-entra-token');assert.equal(options.headers['api-key'],undefined);}
+   assert.ok(!options.body.includes('fixture-'));
+   return {ok:true,json:async()=>({output:[{content:[{type:'output_text',text:JSON.stringify(report)}]}],usage:{input_tokens:80,output_tokens:90}})};
+  }});
+  assert.equal(result.provider,'azure');assert.equal(result.model,'review-deployment');assert.equal(result.usage.input_tokens,80);
+ }
+});
+
+test('Azure health discloses readiness without endpoint or credentials and blocks incomplete configuration',async t=>{
+ let calls=0;
+ const base=await start(t,{providerName:'azure',endpoint:'https://trial.openai.azure.com',model:'',key:'fixture-api-key',authToken:'',provider:async()=>{calls++;return {report};}});
+ const response=await fetch(base+'/api/health').then(r=>r.json());
+ assert.equal(response.provider,'azure');assert.equal(response.configured,false);
+ assert.ok(!JSON.stringify(response).includes('fixture-api-key'));assert.ok(!JSON.stringify(response).includes('trial.openai.azure.com'));
+ assert.equal((await post(base)).status,503);assert.equal(calls,0);
 });

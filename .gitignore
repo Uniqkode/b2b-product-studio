@@ -4,3 +4,7 @@ node_modules/
 qa/screenshots/
 /dist/
 qa/*.jpg
+.env
+.env.*
+!.env.azure.example
+qa/asset-review/
