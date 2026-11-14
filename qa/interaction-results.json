@@ -1,0 +1,187 @@
+{
+  "method": "Happy DOM integration checks; not a visual browser test",
+  "products": 10,
+  "groups": 120,
+  "results": [
+    {
+      "brand": "Fieldwell",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "GrainLedger",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Rill",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Coldline",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Plotmark",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Leasewell",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Brickwise",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Watchpost",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Gatehouse",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    },
+    {
+      "brand": "Proofline",
+      "status": "passed",
+      "checks": [
+        "invalid and valid demo login",
+        "record search and empty state",
+        "status filter",
+        "note save and completion",
+        "reopen",
+        "record creation and recalculated totals",
+        "filtered CSV and formula escaping",
+        "reload persistence",
+        "monthly and annual pricing",
+        "scenario calculator",
+        "menu expansion",
+        "local pilot brief and download"
+      ]
+    }
+  ]
+}

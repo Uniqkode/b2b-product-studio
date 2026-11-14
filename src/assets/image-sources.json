@@ -1,0 +1,64 @@
+[
+  {
+    "asset": "fields",
+    "bytes": 336132,
+    "source": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "grain",
+    "bytes": 563974,
+    "source": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "irrigation",
+    "bytes": 470067,
+    "source": "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "produce",
+    "bytes": 760225,
+    "source": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "building",
+    "bytes": 456035,
+    "source": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "interior",
+    "bytes": 323144,
+    "source": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "security",
+    "bytes": 711884,
+    "source": "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "lobby",
+    "bytes": 319967,
+    "source": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "office",
+    "bytes": 241934,
+    "source": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=84&fm=jpg",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "asset": "land",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Aerial_photo_of_a_beautiful_farmland_in_Lagos.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_a_beautiful_farmland_in_Lagos.jpg",
+    "credit": "Ayorinde Ogundele",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modification": "Resized and JPEG-compressed; CSS display adaptations."
+  }
+]
