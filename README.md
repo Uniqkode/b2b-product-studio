@@ -4,6 +4,8 @@ Ten independently branded, responsive product websites across agriculture, real 
 
 **[Explore the published collection](https://uniqkode.github.io/b2b-product-studio/)**
 
+Publication verified: all 201 checked live routes and key assets return HTTP 200 and match the generated files. See [verification](qa/VERIFICATION.md). An additional [owner-private Sites copy](https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site) is available for review.
+
 | Product | Sector | Operating use case | Website |
 | --- | --- | --- | --- |
 | Fieldwell | Agriculture | Field inspection planning | [Open](https://uniqkode.github.io/b2b-product-studio/fieldwell/) |
