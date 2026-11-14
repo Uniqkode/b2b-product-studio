@@ -31,3 +31,5 @@ Public destination: https://uniqkode.github.io/b2b-product-studio/ . The existin
 After publication, `python scripts/check-live.py` compares every brand page and fourteen key assets per product by HTTPS status and SHA-256. The current release evidence is recorded in `qa/live-check-results.json` and the release note below.
 
 Workload estimates remain planning assumptions. Azure OpenAI connector code is implemented; real deployment, sector integration, pilots, telemetry and production accounts remain the appropriate next stages. No generic RC number, invented staff, customer endorsement or deployed Azure consumption is published.
+
+The redesigned release (`662cbc61b839fb129fdc94dd8865c7293610e1f0`) deployed successfully through [GitHub Pages run 43588253382](https://github.com/Uniqkode/b2b-product-studio/actions/runs/43588253382). All **331 public pages and key assets** returned HTTP 200 and matched the local output exactly by SHA-256. The owner-private Sites deployment also returned `succeeded` for the same source commit. The optional in-app browser handoff did not respond; this does not change either confirmed deployment result.

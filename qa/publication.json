@@ -1,0 +1,22 @@
+{
+  "source_commit": "662cbc61b839fb129fdc94dd8865c7293610e1f0",
+  "github": {
+    "status": "succeeded",
+    "url": "https://uniqkode.github.io/b2b-product-studio/",
+    "workflow": "https://github.com/Uniqkode/b2b-product-studio/actions/runs/43588253382",
+    "verified_resources": 331
+  },
+  "sites": {
+    "project_id": "appgprj_6af81082c71c81918a51d65381f52d34",
+    "version_id": "appgprj_6af81082c71c81918a51d65381f52d34~appgver_77f81c7be8448191b82f2e6e9a6f678d",
+    "deployment_id": "appgdep_6af840dbc2f4819191c138d59d32e6a1",
+    "status": "succeeded",
+    "url": "https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site",
+    "audience": "owner-private"
+  },
+  "checks": {
+    "automated_test_groups": 20,
+    "dom_interaction_groups": 206,
+    "real_browser_visual_qa": "unverified; managed preview relay unavailable"
+  }
+}
