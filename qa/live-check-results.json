@@ -1,8 +1,9 @@
 {
+  "release": "194eda679610d82641e409c7a7f3ecf261e07080",
   "base_url": "https://uniqkode.github.io/b2b-product-studio/",
-  "method": "HTTPS fetch plus SHA-256 comparison to built files",
-  "checks": 201,
-  "passed": 201,
+  "method": "HTTPS fetch and SHA-256 comparison with revised build",
+  "checks": 221,
+  "passed": 221,
   "failed": [],
   "results": [
     {
@@ -102,6 +103,16 @@
     },
     {
       "url": "https://uniqkode.github.io/b2b-product-studio/fieldwell/assets/style.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/fieldwell/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/fieldwell/assets/ai-workspace.js",
       "status": 200,
       "matches_local": true
     },
@@ -206,6 +217,16 @@
       "matches_local": true
     },
     {
+      "url": "https://uniqkode.github.io/b2b-product-studio/grainledger/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/grainledger/assets/ai-workspace.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
       "url": "https://uniqkode.github.io/b2b-product-studio/grainledger/assets/hero.jpg",
       "status": 200,
       "matches_local": true
@@ -302,6 +323,16 @@
     },
     {
       "url": "https://uniqkode.github.io/b2b-product-studio/rill/assets/style.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/rill/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/rill/assets/ai-workspace.js",
       "status": 200,
       "matches_local": true
     },
@@ -406,6 +437,16 @@
       "matches_local": true
     },
     {
+      "url": "https://uniqkode.github.io/b2b-product-studio/coldline/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/coldline/assets/ai-workspace.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
       "url": "https://uniqkode.github.io/b2b-product-studio/coldline/assets/hero.jpg",
       "status": 200,
       "matches_local": true
@@ -502,6 +543,16 @@
     },
     {
       "url": "https://uniqkode.github.io/b2b-product-studio/plotmark/assets/style.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/plotmark/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/plotmark/assets/ai-workspace.js",
       "status": 200,
       "matches_local": true
     },
@@ -606,6 +657,16 @@
       "matches_local": true
     },
     {
+      "url": "https://uniqkode.github.io/b2b-product-studio/leasewell/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/leasewell/assets/ai-workspace.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
       "url": "https://uniqkode.github.io/b2b-product-studio/leasewell/assets/hero.jpg",
       "status": 200,
       "matches_local": true
@@ -702,6 +763,16 @@
     },
     {
       "url": "https://uniqkode.github.io/b2b-product-studio/brickwise/assets/style.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/brickwise/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/brickwise/assets/ai-workspace.js",
       "status": 200,
       "matches_local": true
     },
@@ -806,6 +877,16 @@
       "matches_local": true
     },
     {
+      "url": "https://uniqkode.github.io/b2b-product-studio/watchpost/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/watchpost/assets/ai-workspace.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
       "url": "https://uniqkode.github.io/b2b-product-studio/watchpost/assets/hero.jpg",
       "status": 200,
       "matches_local": true
@@ -906,6 +987,16 @@
       "matches_local": true
     },
     {
+      "url": "https://uniqkode.github.io/b2b-product-studio/gatehouse/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/gatehouse/assets/ai-workspace.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
       "url": "https://uniqkode.github.io/b2b-product-studio/gatehouse/assets/hero.jpg",
       "status": 200,
       "matches_local": true
@@ -1002,6 +1093,16 @@
     },
     {
       "url": "https://uniqkode.github.io/b2b-product-studio/proofline/assets/style.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/proofline/assets/product.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "url": "https://uniqkode.github.io/b2b-product-studio/proofline/assets/ai-workspace.js",
       "status": 200,
       "matches_local": true
     },

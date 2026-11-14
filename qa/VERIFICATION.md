@@ -42,3 +42,5 @@ The managed preview relay again failed to open browser port 4173. No substitute 
 The primary destination is https://uniqkode.github.io/b2b-product-studio/ . The existing owner-private Sites copy is https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site . The latest `live-check-results.json` records HTTPS status and SHA-256 comparisons for the published release.
 
 Workload totals are explicit planning scenarios, not actual customers, usage, model accuracy, certifications or cloud-credit eligibility evidence. Prepared reports and professional limits remain visible in the product experience.
+
+The revised GitHub Pages release (`194eda679610d82641e409c7a7f3ecf261e07080`) deployed successfully in run https://github.com/Uniqkode/b2b-product-studio/actions/runs/43582949626 . All **221** checked public pages and key assets returned HTTP 200 and exactly matched the revised local output by SHA-256. The owner-private Sites deployment also returned `succeeded` for the same source commit.
