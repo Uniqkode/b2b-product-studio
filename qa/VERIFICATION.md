@@ -33,3 +33,7 @@ The public collection is https://uniqkode.github.io/b2b-product-studio/ . The ow
 ## Genuine owner configuration
 
 The public pages do not invent customer counts, throughput, uptime, certification, legal registration, employees or deployed Azure services. OWNER_SETUP.md explains domain, mailbox, booking and team fields. The contact form prepares a reviewable handoff; final sending occurs on GitHub or in the visitor’s email application. Unverified values remain unpublished. Separate remote-repository creation/access is still unavailable to the connected GitHub app; local independent Git histories are preserved.
+
+## Release verification
+
+Code release `0e1a033445a43cbea6a50874d39f2ffc385ed902` deployed successfully to GitHub Pages (workflow 44043682818) and the existing owner-private Sites audience. All 539 public pages and assets checked returned HTTP 200 with an exact SHA-256 match to the build. The ten independent local repositories are clean, committed and byte-matched to their current generated sites. Publication IDs are in `publication.json`; the all-file results are in `live-check-results.json`.

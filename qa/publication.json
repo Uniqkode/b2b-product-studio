@@ -1,22 +1,30 @@
 {
-  "source_commit": "662cbc61b839fb129fdc94dd8865c7293610e1f0",
+  "source_commit": "0e1a033445a43cbea6a50874d39f2ffc385ed902",
   "github": {
     "status": "succeeded",
     "url": "https://uniqkode.github.io/b2b-product-studio/",
-    "workflow": "https://github.com/Uniqkode/b2b-product-studio/actions/runs/43588253382",
-    "verified_resources": 331
+    "workflow": "https://github.com/Uniqkode/b2b-product-studio/actions/runs/44043682818",
+    "verified_resources": 539
   },
   "sites": {
     "project_id": "appgprj_6af81082c71c81918a51d65381f52d34",
-    "version_id": "appgprj_6af81082c71c81918a51d65381f52d34~appgver_77f81c7be8448191b82f2e6e9a6f678d",
-    "deployment_id": "appgdep_6af840dbc2f4819191c138d59d32e6a1",
+    "version_id": "appgprj_6af81082c71c81918a51d65381f52d34~appgver_276c5ccf01c08191887cf2917e6a65fa",
+    "deployment_id": "appgdep_6afc0b9e2d9481918902077fa210dc38",
     "status": "succeeded",
     "url": "https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site",
     "audience": "owner-private"
   },
   "checks": {
-    "automated_test_groups": 20,
-    "dom_interaction_groups": 206,
-    "real_browser_visual_qa": "unverified; managed preview relay unavailable"
-  }
+    "automated_test_groups": 32,
+    "dom_interaction_groups": 286,
+    "real_browser_qa": "Ten domain tools and value planning, market, tour, infrastructure, consented enquiry handoff verified in live desktop Chrome at 1180 x 757. No external message sent.",
+    "phone_viewport": "unverified",
+    "formal_performance": "unverified"
+  },
+  "independent_repositories": {
+    "local_count": 10,
+    "local_status": "clean, committed and matching generated standalone sites",
+    "remote_status": "creation/access unavailable to GitHub connection; not pushed"
+  },
+  "notes": "This source commit is the deployed code and build. Subsequent QA-record-only commits do not change the deployed HTML or assets."
 }
