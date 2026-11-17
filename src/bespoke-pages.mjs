@@ -68,7 +68,7 @@ export function home(b,route=''){
  const c=context(b,route);
  const sections={app:appSection(b,c),stack:stackTeaser(b,c),narrative:growth.narrative(b,c),explorer:growth.explorer(b,c),benefits:growth.benefits(b,c),market:growth.market(b,c),progress:growth.progress(b,c),roadmap:roadmapTeaser(b,c),people:growth.people(b,c),price:growth.pricingTeaser(b,c)};
  const order={fieldwell:['narrative','explorer','app','benefits','market','stack','progress','roadmap','people','price'],grainledger:['narrative','app','benefits','explorer','market','stack','roadmap','progress','price','people'],rill:['narrative','explorer','benefits','app','market','stack','progress','roadmap','people','price'],coldline:['narrative','explorer','app','market','benefits','progress','roadmap','stack','people','price'],plotmark:['narrative','app','explorer','benefits','stack','market','roadmap','progress','people','price'],leasewell:['narrative','explorer','app','benefits','market','roadmap','progress','people','stack','price'],brickwise:['narrative','explorer','app','benefits','stack','market','progress','roadmap','people','price'],watchpost:['narrative','explorer','app','benefits','market','stack','progress','roadmap','price','people'],gatehouse:['narrative','explorer','app','market','benefits','progress','roadmap','people','stack','price'],proofline:['narrative','app','explorer','benefits','market','stack','roadmap','progress','people','price']};
- const html=page(b,route,layouts[b.slug](b,c)+order[b.slug].map(key=>sections[key]).join('')+close(b,c));
+ const html=page(b,route,layouts[b.slug](b,c)+order[b.slug].map(key=>sections[key]).join('')+growth.verifiedUsage(b)+close(b,c));
  return html.replace('product-v2','product-v2 v3-home v3-'+b.slug);
 }
 export function product(b){

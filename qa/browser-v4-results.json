@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-17",
+  "source_release_reviewed": "0ffa95337fef678048f5319bf41025a9b1d8437a",
+  "viewport": {
+    "width": 1180,
+    "height": 757
+  },
+  "products": [
+    {
+      "brand": "Fieldwell",
+      "result": "3 filtered review records; West block selected; 240 planning hours",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "GrainLedger",
+      "result": "2 tonnes; 5% receiving difference",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Rill",
+      "result": "800 m\u00b3 after reserve",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Coldline",
+      "result": "2\u00b0C above threshold",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Plotmark",
+      "result": "1 ha discrepancy",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Leasewell",
+      "result": "2 Dec 2027 notice date",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Brickwise",
+      "result": "3 review records",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Watchpost",
+      "result": "864,000 sampled frames",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Gatehouse",
+      "result": "1 work day beyond policy expiry",
+      "status": "passed",
+      "horizontal_overflow": false
+    },
+    {
+      "brand": "Proofline",
+      "result": "Administrator scope",
+      "status": "passed",
+      "horizontal_overflow": false
+    }
+  ],
+  "additional_checks": [
+    "value plan arithmetic and export control",
+    "buyer tab selection",
+    "workflow tour step 4",
+    "Azure Key Vault infrastructure panel",
+    "enquiry blocked without consent",
+    "reviewable public GitHub enquiry link; no actual sending",
+    "SVG arrow rendering"
+  ],
+  "phone_viewport_verified": false,
+  "formal_performance_verified": false,
+  "actual_model_requests": 0,
+  "actual_enquiries_sent": 0
+}

@@ -2,7 +2,7 @@
 
 ## Local checks
 
-The build produces 250 brand HTML pages: 24 routes (including two aliases) and one 404 per product. The full generator, optional AI adapter, standalone kits and planning arithmetic passed 31 automated test groups. Checks cover headings/canonical URLs, portable local links, WOFF2 assets and licensing, source quotations, consistent scenario arithmetic, genuinely different identities, unverified-fact publication guards, and a product-restricted model adapter in each standalone kit.
+The build produces 250 brand HTML pages: 24 routes (including two aliases) and one 404 per product. The full generator, optional AI adapter, standalone kits and planning arithmetic passed 32 automated test groups. Checks cover headings/canonical URLs, portable local links, WOFF2 assets and licensing, source quotations, consistent scenario arithmetic, genuinely different identities, unverified-fact publication guards, and a product-restricted model adapter in each standalone kit.
 
 The arithmetic tests include an adverse review-time outcome, invalid and extreme inputs, reconciled water allocation, threshold/duration boundaries, equal/mismatched areas, leap dates, inclusive job coverage and exact camera/frame formulas. These tools calculate the entered planning data and do not claim AI model performance.
 
@@ -26,7 +26,7 @@ The DOM runners use Happy DOM and are not visual browser tests. The number-input
 
 ## Browser and publication
 
-The local managed preview relay could not open port 4173 and was stopped. No alternate local browser-control path was used. The published update will be checked in the normal cloud browser after deployment where supported. Results and any remaining viewport/performance limits are recorded in the release verification below.
+The local managed preview relay could not open port 4173 and was stopped. No alternate local browser-control path was used. The GitHub release was checked in live Chrome at 1180 × 757. All ten domain tools responded to changed inputs. Value planning, market tabs, a solution tour, an infrastructure tab and the enquiry-consent handoff were also exercised. SVG arrows rendered correctly. No horizontal overflow was observed at that desktop viewport. A phone-sized viewport and formal loading-speed/Core Web Vitals test remain unverified; the available browser controls did not provide a working viewport resize. No external enquiry was actually sent.
 
 The public collection is https://uniqkode.github.io/b2b-product-studio/ . The owner-private Sites copy keeps its audience at https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site . The live checker now compares every public file within the ten brand folders, including actual font files and the new module dependencies, by HTTP status and SHA-256.
 

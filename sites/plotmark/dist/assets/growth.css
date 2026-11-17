@@ -10,6 +10,9 @@
 .growth-heading h2{max-width:800px}
 .growth-section a .ui-arrow{margin-left:8px}
 .g-stack-capacity{display:block;font-size:12px;line-height:1.9;opacity:.65;max-width:450px;margin-bottom:23px}
+.g-measured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px}
+.g-measured-grid strong{display:block;font:500 44px/1.4 var(--body);letter-spacing:-.04em;overflow-wrap:anywhere}
+.g-measured-grid span{display:block;font-size:14px;line-height:1.9;opacity:.7;margin-top:15px;max-width:280px}
 .g-page-head{padding-top:70px;padding-bottom:60px}
 .g-page-head h1{font-size:clamp(42px,5.8vw,80px);line-height:1.1}
 .g-page-head>p{font-size:17px;line-height:1.9;max-width:740px;opacity:.75;margin-top:27px}
@@ -285,6 +288,7 @@
  .g-brief-section{padding-bottom:45px}
  .g-page-actions{gap:24px;padding-bottom:45px}
  .g-security-controls article{grid-template-columns:35px 1fr;gap:18px}
+ .g-measured-grid{grid-template-columns:1fr;gap:28px}
 }
 @media(max-width:380px){
  .g-value-assumptions,.g-tool-fields,.g-market-layout>aside{grid-template-columns:1fr}

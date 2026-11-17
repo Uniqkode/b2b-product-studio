@@ -22,7 +22,17 @@
     "domainVerified": false,
     "phone": null,
     "officeAddress": null,
-    "team": []
+    "team": [],
+    "usage": {
+      "verified": false,
+      "asOf": null,
+      "periodDays": null,
+      "source": null,
+      "activeOrganizations": null,
+      "processedCount": null,
+      "processedUnit": null,
+      "medianAnalysisSeconds": null
+    }
   },
   "brands": {}
 }

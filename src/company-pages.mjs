@@ -13,8 +13,15 @@ export function attachCompanyProfiles(brands,profiles){
   if(raw.contactVerified&&(!raw.contactEmail||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(raw.contactEmail)))throw new Error(b.name+': verified contact needs a valid email address.');
   if(raw.bookingVerified){const url=new URL(raw.bookingUrl);if(url.protocol!=='https:'||url.username||url.password)throw new Error(b.name+': use a verified HTTPS booking URL.');}
   if(raw.domainVerified&&(!raw.domain||!/^([a-z0-9-]+\.)+[a-z]{2,}$/i.test(raw.domain)))throw new Error(b.name+': use a verified domain without a path.');
+  let usage=null;
+  if(raw.usage?.verified){
+   const u=raw.usage;
+   if(typeof u.source!=='string'||!u.source.trim()||!/^\d{4}-\d{2}-\d{2}$/.test(u.asOf||'')||!Number.isFinite(Date.parse(u.asOf))||new Date(u.asOf+'T00:00:00Z').toISOString().slice(0,10)!==u.asOf||!Number.isInteger(u.periodDays)||u.periodDays<1||u.periodDays>366||!Number.isInteger(u.activeOrganizations)||u.activeOrganizations<0||!Number.isInteger(u.processedCount)||u.processedCount<0||typeof u.processedUnit!=='string'||!u.processedUnit.trim())throw new Error(b.name+': verified usage requires a reporting date, period, evidence source, unit and nonnegative organization/processing counts.');
+   if(u.medianAnalysisSeconds!==null&&u.medianAnalysisSeconds!==undefined&&(!Number.isFinite(u.medianAnalysisSeconds)||u.medianAnalysisSeconds<0))throw new Error(b.name+': measured analysis time must be nonnegative.');
+   usage={asOf:u.asOf,periodDays:u.periodDays,activeOrganizations:u.activeOrganizations,processedCount:u.processedCount,processedUnit:String(u.processedUnit).slice(0,80),medianAnalysisSeconds:u.medianAnalysisSeconds??null};
+  }
   const team=[profiles.maintainer,...(raw.team||[]).filter(member=>member.verified===true&&member.name&&member.role)];
-  b.company={brand:b.name,legalName:verified?raw.legalName:null,rcNumber:verified?raw.rcNumber:null,contactEmail:raw.contactVerified?raw.contactEmail:null,phone:raw.contactVerified?raw.phone:null,officeAddress:raw.contactVerified?raw.officeAddress:null,bookingUrl:raw.bookingVerified?raw.bookingUrl:null,domain:raw.domainVerified?raw.domain:null,team};
+  b.company={brand:b.name,legalName:verified?raw.legalName:null,rcNumber:verified?raw.rcNumber:null,contactEmail:raw.contactVerified?raw.contactEmail:null,phone:raw.contactVerified?raw.phone:null,officeAddress:raw.contactVerified?raw.officeAddress:null,bookingUrl:raw.bookingVerified?raw.bookingUrl:null,domain:raw.domainVerified?raw.domain:null,usage,team};
   b.plan=productPlans[b.slug];b.roadmap=roadMap(b);
   if(b.slug==='fieldwell')b.headingFont='DM Serif Display';
   if(b.slug==='leasewell')b.headingFont='Instrument Serif';

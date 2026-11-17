@@ -16,6 +16,7 @@ Edit `src/company-profiles.json`. Use `defaults` for a real parent company share
 | `maintainer.bio`, `maintainer.linkedin` | Accurate current responsibilities and the genuine professional profile | No invented experience, employers or qualifications |
 | `team` | Actual names, roles, bios, profile/LinkedIn URLs and optional local portrait filename | Each additional person requires `verified: true` |
 | `brands.<slug>.market` | Optional `initial` and `next` country arrays and market strategy text | Publish real strategy, not a claim of existing customers or offices |
+| `usage` | Actual reporting date, period, evidence source, active organizations, processed count/unit and optional measured median analysis time | Only published when `usage.verified: true` and all reporting fields are valid; otherwise no traction block is rendered |
 
 Blank or unverified values stay unpublished. Do not use generic RC numbers, `YOUR-LINK` booking addresses, imaginary employees or a fabricated `hello@` mailbox to make a page appear complete. The brand names and real public maintainer profile are already used.
 

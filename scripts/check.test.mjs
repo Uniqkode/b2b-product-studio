@@ -170,6 +170,16 @@ test('unverified contact, booking and domain values remain unpublished',()=>{
  assert.throws(()=>attachCompanyProfiles([brand],settings),/valid email/);
 });
 
+test('operational usage is hidden until a complete verified reporting record is supplied',()=>{
+ const b=structuredClone(brands[0]),settings=structuredClone(profiles);
+ settings.brands.fieldwell={usage:{verified:false,activeOrganizations:2400,processedCount:47000}};
+ attachCompanyProfiles([b],settings);assert.equal(b.company.usage,null);
+ settings.brands.fieldwell.usage.verified=true;assert.throws(()=>attachCompanyProfiles([b],settings),/verified usage requires/);
+ settings.brands.fieldwell.usage={verified:true,asOf:'2026-11-17',periodDays:30,source:'Internal unit-test fixture, never published',activeOrganizations:2,processedCount:14,processedUnit:'test items',medianAnalysisSeconds:3};
+ attachCompanyProfiles([b],settings);assert.equal(b.company.usage.processedCount,14);assert.equal(Object.hasOwn(b.company.usage,'source'),false);
+ settings.brands.fieldwell.usage.asOf='2026-02-30';assert.throws(()=>attachCompanyProfiles([b],settings),/verified usage requires/);
+});
+
 test('each standalone kit has its own product-restricted AI adapter and Azure deployment template',async()=>{
  for(const b of brands){
   const kit=path.join(root,'sites',b.slug);
