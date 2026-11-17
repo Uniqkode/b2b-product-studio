@@ -1,0 +1,20 @@
+import {mkdir,readFile,writeFile,copyFile} from 'node:fs/promises';
+import path from 'node:path';
+
+export async function writeStandaloneKit(root,b){
+ const site=path.join(root,'sites',b.slug);
+ await mkdir(path.join(site,'service'),{recursive:true});
+ await mkdir(path.join(site,'deployment'),{recursive:true});
+ const adapter=(await readFile(path.join(root,'server/ai-service.mjs'),'utf8')).replace("from '../src/ai-briefs.mjs'","from './product-definition.mjs'");
+ await writeFile(path.join(site,'service/ai-service.mjs'),adapter);
+ await copyFile(path.join(root,'server/provider-config.mjs'),path.join(site,'service/provider-config.mjs'));
+ const definition={[b.slug]:{promise:b.promise,ai:{buyer:b.ai.buyer,input:b.ai.input,output:b.ai.output,scope:b.ai.scope}}};
+ await writeFile(path.join(site,'service/product-definition.mjs'),'export const aiBriefs = '+JSON.stringify(definition,null,2)+';\n');
+ await copyFile(path.join(root,'.env.azure.example'),path.join(site,'.env.azure.example'));
+ await writeFile(path.join(site,'package.json'),JSON.stringify({name:b.slug,version:'4.0.0',private:true,type:'module',scripts:{api:'node service/ai-service.mjs'},engines:{node:'>=20'}},null,2)+'\n');
+ const workflow=`name: Deploy static website to Azure\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\npermissions:\n  contents: read\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - name: Upload standalone website\n        uses: Azure/static-web-apps-deploy@v1\n        with:\n          azure_static_web_apps_api_token: \${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}\n          repo_token: \${{ secrets.GITHUB_TOKEN }}\n          action: upload\n          app_location: /\n          skip_app_build: true\n          skip_api_build: true\n`;
+ await writeFile(path.join(site,'deployment/azure-static-web-apps.yml.example'),workflow);
+ await writeFile(path.join(site,'deployment/README.md'),`# ${b.name} deployment\n\nThe independent export has its homepage at the repository root. Deploy to Azure Static Web Apps: connect the GitHub repository, select a custom/static build, and use the repository root as the app location with no build output directory. Azure can create the workflow, or use the supplied example after creating the actual resource. Store its deployment token in the repository secret \`AZURE_STATIC_WEB_APPS_API_TOKEN\`.\n\nCopy \`deployment/azure-static-web-apps.yml.example\` to \`.github/workflows/azure-static-web-apps.yml\` only after configuring the resource and secret. Do not commit actual keys. The supplied workflow skips a framework build and uploads the standalone files.\n\nAdd a custom domain you actually own through the Azure resource’s domain setup and DNS verification. The root sitemap and canonical URLs come from the verified domain in the complete authoring repository’s \`src/company-profiles.json\`; update them when moving the exported website to another origin.\n\nThe optional Node AI service is separate from static hosting. Configure the server environment using \`.env.azure.example\` and run \`npm run api\`. It supports only ${b.name} evidence requests. It does not load an .env file automatically. Deploy it on an appropriate Node host with HTTPS, explicit allowed origins and a service access token before connecting the website to it. Production tenant authentication and sector ingestion remain separate milestones.\n\nThe static Azure header configuration applies when deployed to Azure Static Web Apps. It does not change GitHub Pages response headers or establish uptime, a live Azure deployment or a security certification.\n`);
+ const config={globalHeaders:{'X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()','X-Frame-Options':'DENY'},responseOverrides:{404:{rewrite:'/404.html',statusCode:404}},mimeTypes:{'.woff2':'font/woff2'}};
+ await writeFile(path.join(site,'dist/staticwebapp.config.json'),JSON.stringify(config,null,2)+'\n');
+}

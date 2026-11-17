@@ -63,7 +63,7 @@
  $$('[data-billing]').forEach(button=>button.addEventListener('click',()=>{
   const annual=button.dataset.billing==='annual';
   $$('[data-billing]').forEach(other=>{const active=other===button;other.classList.toggle('active',active);other.setAttribute('aria-pressed',String(active));});
-  $$('[data-price]').forEach(node=>{const amount=Number(node.dataset.price)*(annual?.8:1);node.textContent=currency(amount);const card=node.closest('.price-card');$('.billing-detail',card).textContent=annual?currency(amount*12)+' billed annually · illustrative price':'Monthly billing · illustrative price';});
+  $$('[data-price]').forEach(node=>{const amount=Number(node.dataset.price)*(annual?.8:1);node.textContent=currency(amount);const card=node.closest('.price-card');$('.billing-detail',card).textContent=annual?currency(amount*12)+' billed annually':'Monthly plan price';});
  }));
  const slider=$('#scenario-range');
  if(slider)slider.addEventListener('input',()=>{

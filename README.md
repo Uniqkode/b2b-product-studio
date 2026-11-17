@@ -27,7 +27,10 @@ Ten independently branded products for agriculture, real estate and security. Ea
 - Compare illustrative monthly and annual pricing and adjust a workload scenario using explicit arithmetic.
 - Save and download a local pilot brief. The contact form sends no email.
 - Read product-specific Azure service roles, company/team and contact pages, privacy/data/AI policies and a five-stage development roadmap.
-- Inspect 18 routed pages plus a 404 page in each independent website, 190 brand pages altogether.
+- Explore 24 routed pages (including two aliases) plus a 404 per product, 250 brand HTML pages altogether. New problem, solution, market and combined legal pages are fully interlinked.
+- Use ten domain-specific explorers: survey filtering, ticket reconciliation, a water budget, temperature comparison, parcel-area comparison, notice-date calculation, maintenance filtering, frame-capacity planning, contractor date coverage and policy-scope comparison.
+- Compare review-time assumptions, export the plan, switch buyer/architecture tabs and step through a guided workflow.
+- Prepare a consented enquiry for review and final sending through GitHub, or an email/appointment link when verified owner details are configured.
 
 ## Real AI connection
 
@@ -101,3 +104,11 @@ All operational fixtures, organizations, prices, workloads and example outcomes 
 The original SVG marks are included. Photography remains licensed and locally hosted; no generated people or customer imagery is used. Font copyright and open font licenses are included. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 See [QA notes](qa/VERIFICATION.md) for automated checks and the remaining visual-browser verification limit.
+
+## Product-completion revision
+
+The websites use product-first marketing copy, SVG arrows, compressed WOFF2 fonts, a problem/Why now narrative, a specific market strategy, three outcome measures per product and a model/evaluation/compute explanation. Sample-mode context remains at the relevant review and account boundaries. Public live-customer, uptime, registration and Azure-consumption claims are not fabricated.
+
+Each independent kit includes a product-restricted optional Node AI service, an Azure Static Web Apps deployment example and deployment notes. See [OWNER_SETUP.md](OWNER_SETUP.md) for real company, inbox, domain, LinkedIn and booking values that must be supplied. Contact forms prepare an explicit user-reviewed handoff; the old browser-local brief is a separate optional tool.
+
+New source: `src/growth-data.mjs`, `src/growth-pages.mjs`, `src/growth-interactions.js`, `src/planning-math.js`, `src/growth.css` and `src/icons.mjs`. New verification: `scripts/check-growth-interactions.mjs` and `src/planning-math.test.mjs`.

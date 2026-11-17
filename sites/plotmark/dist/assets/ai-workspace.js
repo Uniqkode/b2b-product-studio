@@ -2,6 +2,7 @@
 (() => {
  'use strict';
  const brand=window.BRAND;if(!brand?.ai)return;
+ const icon='<svg class="ui-arrow" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg>';
  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const newId=()=>brand.slug+'-'+(crypto.randomUUID?.()||Date.now()+'-'+Math.random().toString(36).slice(2));
  const number=value=>Number(value).toLocaleString('en-NG');
@@ -17,7 +18,7 @@
  function renderHistory(){
   const target=$('[data-ai-history]');if(!target)return;
   const rows=readHistory();
-  target.innerHTML=rows.length?rows.map((r,i)=>`<article class="ai-history-item"><div><h3>${esc(r.title)}</h3><p>${r.mode==='live'?'Connected AI':'Prepared example'} · ${r.findings.length} finding${r.findings.length===1?'':'s'} · Queued for human review</p></div><button class="text-button" type="button" data-ai-history-export="${i}">Download report ↗</button></article>`).join(''):'<p>Run an analysis and accept it for review to add a report here.</p>';
+  target.innerHTML=rows.length?rows.map((r,i)=>`<article class="ai-history-item"><div><h3>${esc(r.title)}</h3><p>${r.mode==='live'?'Connected AI':'Prepared example'} · ${r.findings.length} finding${r.findings.length===1?'':'s'} · Queued for human review</p></div><button class="text-button" type="button" data-ai-history-export="${i}">Download report ${icon}</button></article>`).join(''):'<p>Run an analysis and accept it for review to add a report here.</p>';
   $$('[data-ai-history-export]',target).forEach(button=>button.addEventListener('click',()=>{const report=rows[Number(button.dataset.aiHistoryExport)];if(report)download(reportText(report),brand.slug+'-analysis-'+report.id+'.md');}));
  }
  const slider=$('[data-workload-slider]');
@@ -52,11 +53,11 @@
   }
   function renderReport(report){
    current=report;
-   output.innerHTML=`<div class="ai-report-meta"><span>${report.mode==='live'?'CONNECTED AI ANALYSIS':'PREPARED SAMPLE ANALYSIS'}</span><span>${report.cached?'Cached result · no new model request':report.mode==='live'?'Check every cited claim':'No live AI request was sent'}</span></div><div class="ai-report-summary">${esc(report.summary)}</div>${report.findings.map((f,i)=>`<article class="ai-finding"><div class="ai-finding-top"><h4>${esc(f.title)}</h4><span>${esc(f.level||'Review')}</span></div><button class="ai-evidence-quote" type="button" data-ai-citation="${i}"><span>${esc(f.source)}</span>“${esc(f.quote)}” ↗</button><p class="ai-finding-action"><strong>NEXT ACTION</strong>${esc(f.action)}</p></article>`).join('')}`;
+   output.innerHTML=`<div class="ai-report-meta"><span>${report.mode==='live'?'CONNECTED AI ANALYSIS':'PREPARED SAMPLE ANALYSIS'}</span><span>${report.cached?'Cached result · no new model request':report.mode==='live'?'Check every cited claim':'No live AI request was sent'}</span></div><div class="ai-report-summary">${esc(report.summary)}</div>${report.findings.map((f,i)=>`<article class="ai-finding"><div class="ai-finding-top"><h4>${esc(f.title)}</h4><span>${esc(f.level||'Review')}</span></div><button class="ai-evidence-quote" type="button" data-ai-citation="${i}"><span>${esc(f.source)}</span>“${esc(f.quote)}” ${icon}</button><p class="ai-finding-action"><strong>NEXT ACTION</strong>${esc(f.action)}</p></article>`).join('')}`;
    if(report.usage){const line=document.createElement('p');line.className='ai-report-meta';line.textContent=`Service-reported usage: ${number(report.usage.input_tokens||0)} input tokens · ${number(report.usage.output_tokens||0)} output tokens`;output.append(line);}
    $$('[data-ai-citation]',root).forEach(button=>button.addEventListener('click',()=>{const f=report.findings[Number(button.dataset.aiCitation)];showSource(f.source,f.quote);}));
    $('[data-ai-report-actions]',root).hidden=false;
-   const accept=$('[data-ai-accept]',root);accept.disabled=!!report.accepted;accept.innerHTML=report.accepted?'Queued for human review':'Accept for human review <span aria-hidden="true">↗</span>';
+   const accept=$('[data-ai-accept]',root);accept.disabled=!!report.accepted;accept.innerHTML=report.accepted?'Queued for human review':'Accept for human review '+icon;
   }
   $('[data-ai-case]',root).addEventListener('change',event=>{
    caseName=event.target.value;requestVersion++;controller?.abort();current=null;sources=activeCase().sources;renderSources();progress.hidden=true;

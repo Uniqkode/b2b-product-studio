@@ -5,7 +5,9 @@
     "role": "Project maintainer",
     "profile": "https://github.com/Uniqkode",
     "portrait": "maintainer-avatar.jpg",
-    "verificationSource": "https://api.github.com/users/Uniqkode"
+    "verificationSource": "https://api.github.com/users/Uniqkode",
+    "bio": "Maintains the published product source, working review interfaces and implementation documentation for Uniqkode.",
+    "linkedin": null
   },
   "defaults": {
     "legalName": null,
@@ -13,6 +15,11 @@
     "registrationVerified": false,
     "registrationEvidence": null,
     "contactEmail": null,
+    "contactVerified": false,
+    "bookingUrl": null,
+    "bookingVerified": false,
+    "domain": null,
+    "domainVerified": false,
     "phone": null,
     "officeAddress": null,
     "team": []

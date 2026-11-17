@@ -1,0 +1,147 @@
+{
+  "method": "Happy DOM; no network or paid model calls",
+  "products": 10,
+  "groups": 80,
+  "results": [
+    {
+      "brand": "fieldwell",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "grainledger",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "rill",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "coldline",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "plotmark",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "leasewell",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "brickwise",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "watchpost",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "gatehouse",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    },
+    {
+      "brand": "proofline",
+      "status": "passed",
+      "groups": [
+        "value plan reconciliation and export",
+        "invalid and adverse planning inputs",
+        "market tab state and keyboard control",
+        "product-specific explorer",
+        "workflow tour progression",
+        "infrastructure tab selection",
+        "enquiry consent enforcement",
+        "enquiry handoff and truthful delivery status"
+      ]
+    }
+  ]
+}

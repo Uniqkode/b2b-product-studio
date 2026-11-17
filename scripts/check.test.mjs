@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,stat,readdir} from 'node:fs/promises';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 import {brands,routes} from '../src/brands.mjs';
 import {enrichBrands} from '../src/ai-briefs.mjs';
 import {attachCompanyProfiles,about} from '../src/company-pages.mjs';
@@ -49,21 +49,21 @@ test('AI workload scenarios reconcile and prepared findings cite supplied eviden
  }
 });
 
-test('all 190 brand pages have a title, a single main heading and accurate MVP scope',async()=>{
+test('all 250 brand pages have a title, canonical URL and a single main heading',async()=>{
  let count=0;
  for(const brand of brands){
   const htmlFiles=(await files(path.join(docs,brand.slug))).filter(f=>f.endsWith('.html'));
-  assert.equal(htmlFiles.length,19);
+  assert.equal(htmlFiles.length,25);
   for(const filename of htmlFiles){
    const html=await readFile(filename,'utf8');
    assert.match(html,/<html lang="en">/);assert.match(html,/<title>[^<]+<\/title>/);
    assert.equal((html.match(/<h1(?:>| )/g)||[]).length,1,filename);
-   assert.match(html,/sample|Sample|DEMO|demonstration/i,filename);
+   assert.match(html,/<link rel="canonical" href="https:\/\//,filename);
    assert.ok(!/lorem ipsum|TODO|undefined|\{\{BRAND/.test(html),filename);
    count++;
   }
  }
- assert.equal(count,190);
+ assert.equal(count,250);
 });
 
 test('every local link, image, script and CSS font in all published routes resolves',async()=>{
@@ -130,7 +130,7 @@ test('company pages expose the real maintainer and omit unverified registration'
   const team=await readFile(path.join(docs,b.slug,'team/index.html'),'utf8');
   assert.ok(team.includes('Precious Arinze')&&team.includes('https://github.com/Uniqkode'));
   const contact=await readFile(path.join(docs,b.slug,'contact/index.html'),'utf8');
-  assert.ok(contact.includes('/issues/new?title=')&&contact.includes('GitHub enquiries are public'));
+  assert.ok(contact.includes('/issues/new?title=')&&contact.includes('GitHub enquiry will be public'));
   const company=await readFile(path.join(docs,b.slug,'about/index.html'),'utf8');
   assert.ok(!/RC[ -]?\d{3,}/.test(company));
   assert.equal(b.company.rcNumber,null);
@@ -140,6 +140,49 @@ test('company pages expose the real maintainer and omit unverified registration'
  attachCompanyProfiles([brand],fake);assert.ok(!about(brand).includes('RC0000000'));
  fake.brands.fieldwell.registrationVerified=true;
  assert.throws(()=>attachCompanyProfiles([brand],fake),/evidence reference/);
+});
+
+test('commercial content and functional explorers exist without fake live-traction claims',async()=>{
+ const kinds=new Set();
+ for(const b of brands){
+  const home=await readFile(path.join(docs,b.slug,'index.html'),'utf8');
+  for(const label of ['WHY NOW','MARKET OPPORTUNITY','OUTCOMES TO MEASURE','PRODUCT STATUS','data-value-planner','data-domain-tool','data-market-tab'])assert.ok(home.includes(label),b.slug+': '+label);
+  assert.ok(!home.includes('Workspace preview')&&!home.includes('class="demo-ribbon"'));
+  assert.ok(!/2,400\+ active teams|1,200.*processed today|99\.9% uptime|All systems operational/.test(home));
+  kinds.add(home.match(/data-domain-tool="([^"]+)"/)[1]);
+  const technology=await readFile(path.join(docs,b.slug,'technology/index.html'),'utf8');
+  for(const text of ['AI TECHNOLOGY','COMPUTE CHOICE','data-pipeline-tab','Azure Key Vault','Microsoft Entra ID','Azure Private Link'])assert.ok(technology.includes(text),b.slug+': '+text);
+  for(const route of ['home','problem','solution','market','legal','Technology'])assert.ok((await readFile(path.join(docs,b.slug,route,'index.html'),'utf8')).length>1000);
+  const fonts=await readFile(path.join(docs,b.slug,'assets/fonts.css'),'utf8');assert.match(fonts,/format\('woff2'\)/);
+  for(const [,name] of fonts.matchAll(/url\(([^)]+)\)/g))assert.equal((await readFile(path.join(docs,b.slug,'assets',name))).subarray(0,4).toString(),'wOF2');
+ }
+ assert.equal(kinds.size,10);
+});
+
+test('unverified contact, booking and domain values remain unpublished',()=>{
+ const brand=structuredClone(brands[0]),settings=structuredClone(profiles);
+ settings.brands.fieldwell={contactEmail:'placeholder@example.com',bookingUrl:'https://calendly.com/YOUR-LINK/demo',domain:'example.com'};
+ attachCompanyProfiles([brand],settings);
+ for(const key of ['contactEmail','bookingUrl','domain'])assert.equal(brand.company[key],null);
+ settings.brands.fieldwell.bookingVerified=true;settings.brands.fieldwell.bookingUrl='javascript:alert(1)';
+ assert.throws(()=>attachCompanyProfiles([brand],settings),/HTTPS booking URL/);
+ settings.brands.fieldwell.bookingVerified=false;settings.brands.fieldwell.contactVerified=true;settings.brands.fieldwell.contactEmail='invalid';
+ assert.throws(()=>attachCompanyProfiles([brand],settings),/valid email/);
+});
+
+test('each standalone kit has its own product-restricted AI adapter and Azure deployment template',async()=>{
+ for(const b of brands){
+  const kit=path.join(root,'sites',b.slug);
+  const api=await import(pathToFileURL(path.join(kit,'service/ai-service.mjs')));
+  const input={brand:b.slug,inputs:[{id:'S1',name:'Test source',kind:'text',text:'A supplied source for a product-boundary check.'}]};
+  assert.equal(api.validateInputs(input).brand,b.slug);
+  const other=brands.find(x=>x.slug!==b.slug).slug;
+  assert.throws(()=>api.validateInputs({...input,brand:other}),/supported product/);
+  const template=await readFile(path.join(kit,'deployment/azure-static-web-apps.yml.example'),'utf8');
+  assert.ok(template.includes('secrets.AZURE_STATIC_WEB_APPS_API_TOKEN')&&template.includes('skip_app_build: true'));
+  const config=JSON.parse(await readFile(path.join(kit,'dist/staticwebapp.config.json'),'utf8'));
+  assert.equal(config.globalHeaders['X-Content-Type-Options'],'nosniff');
+ }
 });
 
 test('roadmaps distinguish built code from planned Azure services and pilots',async()=>{

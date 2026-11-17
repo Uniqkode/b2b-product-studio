@@ -1,14 +1,16 @@
-# Verification — distinct websites and Azure roadmaps
+# Verification — product completion and interaction revision
 
 ## Local checks
 
-The revision passed **20 automated test groups** across the ten websites and the optional AI adapter. The build creates **190 brand HTML pages** (18 routes and a 404 per product). Checks cover single main headings, working local references, reconciled sample totals, accurate workload formulas, source quotations, ten different page structures, thirty separate industry photos with attribution, real maintainer information, omitted unverified registrations, and product-specific roadmap/Azure statuses.
+The build produces 250 brand HTML pages: 24 routes (including two aliases) and one 404 per product. The full generator, optional AI adapter, standalone kits and planning arithmetic passed 31 automated test groups. Checks cover headings/canonical URLs, portable local links, WOFF2 assets and licensing, source quotations, consistent scenario arithmetic, genuinely different identities, unverified-fact publication guards, and a product-restricted model adapter in each standalone kit.
 
-Backend checks cover authentication, explicit allowed origins, input limits, caching and shared in-flight requests, structured provider output and rejected invented quotations. Azure tests validate resource endpoints, deployment names, API-key and Microsoft Entra authentication, incomplete configuration handling, and health responses that omit credentials and resource details.
+The arithmetic tests include an adverse review-time outcome, invalid and extreme inputs, reconciled water allocation, threshold/duration boundaries, equal/mismatched areas, leap dates, inclusive job coverage and exact camera/frame formulas. These tools calculate the entered planning data and do not claim AI model performance.
 
-**206 DOM interaction groups passed:** 120 operational workspace/form groups; 80 evidence-review and connected-service boundary groups; six additional field-selector, intake-filter and document-library groups on home and product pages. Connected provider responses are mocked. No paid model call, cloud deployment or Azure credit use was performed by these tests.
+DOM checks cover the existing operational register, sample access, forms and billing controls (120 groups), evidence-review and configured-service boundaries (80), the three original bespoke home/product controls (6), and new value planning, ten domain explorers, accessible tabs, tours and consented enquiry handoffs (80). All 286 groups passed. Results are stored in their respective JSON files.
 
-## Repeat the checks
+Provider replies are mocked in automated tests. No paid model call, customer contact, appointment booking or actual Azure resource deployment is performed by the checks.
+
+## Commands
 
 ```sh
 npm run build
@@ -16,20 +18,18 @@ npm test
 B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-interactions.mjs
 B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-ai-interactions.mjs
 B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-design-interactions.mjs
+B2B_DOM_MODULE=/tmp/b2b-studio-qa/node_modules/happy-dom/lib/index.js node scripts/check-growth-interactions.mjs
+python scripts/check-live.py
 ```
 
-The DOM runners require Happy DOM (20.8.4 used here). Happy DOM simulates interactions and does not render visual layouts. Its decimal-step constraint is disabled only in the fixture because of its binary floating-point modulo behavior; the application’s positive-value and maximum checks still run.
+The DOM runners use Happy DOM and are not visual browser tests. The number-input decimal-step workaround is limited to that emulator; application bounds and arithmetic checks remain active.
 
-## Visual verification limit
+## Browser and publication
 
-The managed preview relay failed to open browser port 4173. Its stopped state was confirmed, and no substitute browser-control path was used. Responsive styles and larger text are implemented, but real-browser viewport screenshots remain unverified.
+The local managed preview relay could not open port 4173 and was stopped. No alternate local browser-control path was used. The published update will be checked in the normal cloud browser after deployment where supported. Results and any remaining viewport/performance limits are recorded in the release verification below.
 
-## Publication verification
+The public collection is https://uniqkode.github.io/b2b-product-studio/ . The owner-private Sites copy keeps its audience at https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site . The live checker now compares every public file within the ten brand folders, including actual font files and the new module dependencies, by HTTP status and SHA-256.
 
-Public destination: https://uniqkode.github.io/b2b-product-studio/ . The existing owner-private Sites copy preserves its current access at https://uniqkode-b2b-studio.oakcamellia2.chatgpt.site .
+## Genuine owner configuration
 
-After publication, `python scripts/check-live.py` compares every brand page and fourteen key assets per product by HTTPS status and SHA-256. The current release evidence is recorded in `qa/live-check-results.json` and the release note below.
-
-Workload estimates remain planning assumptions. Azure OpenAI connector code is implemented; real deployment, sector integration, pilots, telemetry and production accounts remain the appropriate next stages. No generic RC number, invented staff, customer endorsement or deployed Azure consumption is published.
-
-The redesigned release (`662cbc61b839fb129fdc94dd8865c7293610e1f0`) deployed successfully through [GitHub Pages run 43588253382](https://github.com/Uniqkode/b2b-product-studio/actions/runs/43588253382). All **331 public pages and key assets** returned HTTP 200 and matched the local output exactly by SHA-256. The owner-private Sites deployment also returned `succeeded` for the same source commit. The optional in-app browser handoff did not respond; this does not change either confirmed deployment result.
+The public pages do not invent customer counts, throughput, uptime, certification, legal registration, employees or deployed Azure services. OWNER_SETUP.md explains domain, mailbox, booking and team fields. The contact form prepares a reviewable handoff; final sending occurs on GitHub or in the visitor’s email application. Unverified values remain unpublished. Separate remote-repository creation/access is still unavailable to the connected GitHub app; local independent Git histories are preserved.

@@ -13,13 +13,9 @@ parser.add_argument('--base', default='https://uniqkode.github.io/b2b-product-st
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent
 docs = root / 'docs'
-assets = ['style.css', 'product.css', 'brand-designs.css', 'app.js', 'ai-workspace.js',
-          'brand-interactions.js', 'config.js', 'fonts.css', 'logo.svg', 'hero.jpg',
-          'editorial-1.jpg', 'editorial-2.jpg', 'maintainer-avatar.jpg', 'editorial-sources.json']
 targets = [docs / 'index.html']
 for brand in sorted(path for path in docs.iterdir() if path.is_dir() and (path / 'assets/config.js').is_file()):
-    targets.extend(sorted(brand.rglob('*.html')))
-    targets.extend(brand / 'assets' / name for name in assets)
+    targets.extend(sorted(path for path in brand.rglob('*') if path.is_file() and path.name != '.nojekyll'))
 
 
 def check(filename):

@@ -16,6 +16,9 @@ AI checks field photos and shows agronomists where to inspect next.
 - **Logo:** Three cultivated rows bend into an F; an open seed shape leaves room for growth.
 - **Photography:** original lead image plus Healthy corn rows in a cultivated field; Maize leaf and crop condition photograph. Sources and licenses appear on Terms & credits.
 - **Action:** Assign an inspection.
+- **Product explorer:** Build the next inspection list.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## GrainLedger
 
@@ -31,6 +34,9 @@ AI reviews grain photos and intake documents before a lot is released.
 - **Logo:** Interlocking G and L strokes form a warehouse tally with three grain bars.
 - **Photography:** original lead image plus Modern warehouse storage and handling; Combine harvester working in a wheat field. Sources and licenses appear on Terms & credits.
 - **Action:** Record quality decision.
+- **Product explorer:** Check the ticket difference.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Rill
 
@@ -46,6 +52,9 @@ AI forecasts crop water demand and gives irrigation teams a daily zone plan.
 - **Logo:** An R made from two flowing channels; the counter is a water drop.
 - **Photography:** original lead image plus Drip irrigation equipment in a cultivated field; An irrigation channel beside cultivated fields. Sources and licenses appear on Terms & credits.
 - **Action:** Approve the watering plan.
+- **Product explorer:** Compare a daily water budget.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Coldline
 
@@ -61,6 +70,9 @@ AI reviews produce images and temperature histories to flag shipments at risk.
 - **Logo:** A squared C encloses a temperature line; the open edge represents goods moving through.
 - **Photography:** original lead image plus Warehouse picking and storage aisles; A refrigerated logistics truck. Sources and licenses appear on Terms & credits.
 - **Action:** Assign a cold-chain check.
+- **Product explorer:** Inspect a temperature exception.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Plotmark
 
@@ -76,6 +88,9 @@ AI compares land documents and survey references before an acquisition review.
 - **Logo:** A parcel outline folds into a P, anchored by a survey pin at its baseline.
 - **Photography:** original lead image plus A surveyor using land measurement equipment; Aerial construction and land development context. Sources and licenses appear on Terms & credits.
 - **Action:** Send for professional review.
+- **Product explorer:** Compare the two stated areas.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Leasewell
 
@@ -91,6 +106,9 @@ AI reads commercial leases and amendments, then lists the obligations that need 
 - **Logo:** An open arch meets a ledger baseline: the building and the lease in one quiet mark.
 - **Photography:** original lead image plus Contemporary architectural building exterior; Commercial office and meeting spaces. Sources and licenses appear on Terms & credits.
 - **Action:** Assign the lease action.
+- **Product explorer:** Work back from a review date.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Brickwise
 
@@ -106,6 +124,9 @@ AI reviews building inspection images and notes, then drafts an evidence-linked 
 - **Logo:** Offset masonry units build a B with an open service passage through the center.
 - **Photography:** original lead image plus Hands-on electronic equipment repair; Large commercial building exterior. Sources and licenses appear on Terms & credits.
 - **Action:** Create the reviewed work order.
+- **Product explorer:** Focus the maintenance board.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Watchpost
 
@@ -121,6 +142,9 @@ AI checks site video for defined events and sends supervisors the relevant clip.
 - **Logo:** Two observation brackets and a central line make a W without a conventional shield.
 - **Photography:** original lead image plus Security cameras mounted on a building; Security operations monitoring context. Sources and licenses appear on Terms & credits.
 - **Action:** Record the supervisor response.
+- **Product explorer:** Plan the frame-review workload.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Gatehouse
 
@@ -136,6 +160,9 @@ AI reads contractor documents and flags missing or expired evidence for a review
 - **Logo:** A doorway cut from a G creates a welcoming entrance with a clear boundary.
 - **Photography:** original lead image plus Construction workers wearing safety helmets; Construction team at a development site. Sources and licenses appear on Terms & credits.
 - **Action:** Request the missing evidence.
+- **Product explorer:** Check the work-period coverage.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
 ## Proofline
 
@@ -151,4 +178,7 @@ AI compares supplier security documents with your questions and cites the answer
 - **Logo:** A continuous P-shaped evidence line ends in a small verified square, without implying certification.
 - **Photography:** original lead image plus Data-center server equipment and network cabling; Network switching and infrastructure cables. Sources and licenses appear on Terms & credits.
 - **Action:** Send the evidence request.
+- **Product explorer:** Check whether the passage covers the question.
+- **Market strategy:** Nigeria first; expansion follows evaluation.
+- **Interaction:** editable value plan, accessible buyer/technology tabs, guided workflow and an enquiry handoff.
 
